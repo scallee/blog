@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>命令 on 轨迹的印痕</title>
+    <link>https://scallee.github.io/blog/tags/%E5%91%BD%E4%BB%A4/</link>
+    <description>Recent content in 命令 on 轨迹的印痕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 16 Jun 2019 19:42:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://scallee.github.io/blog/tags/%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux命令</title>
+      <link>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 16 Jun 2019 19:42:41 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;h3 id=&#34;linux-命令&#34;&gt;Linux 命令&lt;/h3&gt;
+
+&lt;h4 id=&#34;ls-和-ll-的使用方法&#34;&gt;&lt;code&gt;ls&lt;/code&gt; 和 &lt;code&gt;ll&lt;/code&gt;的使用方法：&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;ll&lt;/code&gt;：罗列出当前文件或目录的详细信息，含有时间、读写权限、大小、时间等信息，
+像Windows显示的详细信息。可以理解为 ll 和 ls -l 的功能是相同的.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
