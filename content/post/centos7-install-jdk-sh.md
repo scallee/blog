@@ -8,7 +8,7 @@ description: "一键安装jdk"
 tags: ["java","jdk","sh"]
 categories: ["Java"]
 # author: ""
-# comment: false
+comment: false
 # toc: false
 contentCopyright: false
 reward: false

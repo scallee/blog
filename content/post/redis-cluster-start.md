@@ -8,7 +8,7 @@ description: "最简单的redis集群cluster模式启动脚本"
 tags: ["redis","shell"]
 categories: ["redis"]
 # author: ""
-# comment: false
+comment: false
 toc: true
 contentCopyright: false
 reward: false
