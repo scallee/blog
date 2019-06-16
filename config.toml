@@ -1,14 +1,14 @@
-baseURL = "https://www.xianmin.org"
+baseURL = "lhttps://scallee.github.io/blog/"
 defaultContentLanguage = "zh-cn"
-title = "贤民的比特记忆"
+title = "轨迹的印痕"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
 
 hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
 paginate = 10                                             # （可选）首页显示的文章条目数量，默认为10
-disqusShortname = "xianmin12"      # disqus_shortname
-googleAnalytics = "UA-34199129-1"      # UA-XXXXXXXX-X
+disqusShortname = "scallee"      # disqus_shortname
+googleAnalytics = ""      # UA-XXXXXXXX-X
 rssLimit = 20
 # copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
 
@@ -19,7 +19,7 @@ pygmentsCodefencesGuessSyntax = true
 pygmentsOptions = "linenos=table"
 
 [author]                  # require                       # 必需
-  name = "贤民"
+  name = "轨迹的印痕"
 
 [sitemap]                 # require                       # 必需
   changefreq = "weekly"
@@ -61,8 +61,8 @@ pygmentsOptions = "linenos=table"
   since = "2017"            # Site creation time          # 站点建立时间
 
   # site info (option)                                    # 站点信息（可选）
-  logoTitle = "贤民的比特记忆"        # default: the title value    # 默认值: 上面设置的title值
-  keywords = ["linux", "emacs", "program", "journal", "贤民", "博客", "笔记"]
+  logoTitle = "轨迹的印痕"        # default: the title value    # 默认值: 上面设置的title值
+  keywords = ["linux", "java", "redis", "git", "博客", "笔记"]
   description = "这里是我写字的地方"
   rssFullContent = true
 
@@ -104,35 +104,35 @@ pygmentsOptions = "linenos=table"
     fancyboxCss = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">'
 
   [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
-    enable = true
-    repo = "xianmin/comments---xianmin.org"    # The repo to store comments
-    issueTerm = "pathname"
+    enable = false
+  #  repo = "xianmin/comments---xianmin.org"    # The repo to store comments
+  #  issueTerm = "pathname"
 
   [params.reward]                                         # 文章打赏
-    enable = true
-    wechat = "/reward_wechat.png"           # 微信二维码
-    alipay = "/reward_alipay.jpg"           # 支付宝二维码
+    enable = false
+    wechat = "/xxx"           # 微信二维码
+    alipay = "/xxx"           # 支付宝二维码
 
   [params.counter.leancloud]  # Chinese leancloud visitor counter  # leancloud 计数器
-  enable = true
-  appId = "CI5I8j1EukaHvGfYTg7Jpl3J-gzGzoHsz"
-  appKey = "hsTbeRKvb1d22ppbvmV2zHii"
+  enable = false
+  #appId = "CI5I8j1EukaHvGfYTg7Jpl3J-gzGzoHsz"
+  #appKey = "hsTbeRKvb1d22ppbvmV2zHii"
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:xianmin12@qq.com"
+   # a-email = "mailto:xianmin12@qq.com"
     # b-stack-overflow = "http://localhost:1313"
-    c-twitter = "https://twitter.com/xian_min"
+    # c-twitter = "https://twitter.com/xian_min"
     # d-facebook = "http://localhost:1313"
     # e-linkedin = "http://localhost:1313"
     # f-google = "http://localhost:1313"
-    g-github = "https://github.com/xianmin"
-    h-weibo = "https://weibo.com/xianmin12"
-    i-zhihu = "https://www.zhihu.com/people/xian-min"
-    j-douban = "https://www.douban.com/people/xianmin12/"
+    g-github = "https://github.com/scallee"
+    # h-weibo = "https://weibo.com/xianmin12"
+    # i-zhihu = "https://www.zhihu.com/people/xian-min"
+   # j-douban = "https://www.douban.com/people/xianmin12/"
     # k-pocket = "http://localhost:1313"
     # l-tumblr = "http://localhost:1313"
     # m-instagram = "http://localhost:1313"
-    p-coding = "https://coding.net/u/xianmin"
+   # p-coding = "https://coding.net/u/xianmin"
 
 
 # 将下面这段配置取消注释可以使 hugo 生成 .md 文件
