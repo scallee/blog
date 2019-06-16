@@ -1,4 +1,4 @@
-baseURL = "lhttps://scallee.github.io/blog/"
+baseURL = "https://scallee.github.io/blog/"
 defaultContentLanguage = "zh-cn"
 title = "轨迹的印痕"
 enableRobotsTXT = true
