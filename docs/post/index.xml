@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 轨迹的印痕</title>
+    <link>https://scallee.github.io/blog/post/</link>
+    <description>Recent content in Posts on 轨迹的印痕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 May 2019 21:11:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://scallee.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>记录： 2019 年 4 月 - 新成就与新项目</title>
+      <link>https://scallee.github.io/blog/post/review-2019-04/</link>
+      <pubDate>Wed, 01 May 2019 21:11:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2019-04/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+&lt;h2 id=&#34;英语学习&#34;&gt;英语学习&lt;/h2&gt;
+
+&lt;p&gt;很遗憾，这个月基本没怎么背单词，5 月份需要重新调整。&lt;/p&gt;
+
+&lt;p&gt;尝试开始阅读《经济学人》，精读了两篇文章。&lt;/p&gt;
+
+&lt;p&gt;尝试遮挡住字幕观看《南方公园》，看了两集。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2019 年 3 月 - 状态不佳</title>
+      <link>https://scallee.github.io/blog/post/review-2019-03/</link>
+      <pubDate>Wed, 03 Apr 2019 19:47:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2019-03/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+&lt;h2 id=&#34;英语学习&#34;&gt;英语学习&lt;/h2&gt;
+
+&lt;p&gt;背单词进度： 100% 。&lt;/p&gt;
+
+&lt;p&gt;这个月将奶爸整理的「经济学人-词频 500 次以上」的单词背完了，共计 3000 个，耗时半年。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2019 年 2 月 - 重振精神</title>
+      <link>https://scallee.github.io/blog/post/review-2019-02/</link>
+      <pubDate>Sun, 03 Mar 2019 07:30:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2019-02/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/memory/2019/02/00.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/memory/2019/02/00.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;与偶像勇哥的合影&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux 下，使用 Linuxbrew 安装更多的软件</title>
+      <link>https://scallee.github.io/blog/post/use-linuxbrew/</link>
+      <pubDate>Wed, 27 Feb 2019 08:00:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/use-linuxbrew/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://brew.sh/&#34;&gt;Homebrew&lt;/a&gt; 是 MacOS 下的一个包管理工具，可以用它安装各种软件，相当于 Linux 下的 &lt;code&gt;apt-get&lt;/code&gt; ，大部分使用 Mac 的开发者对它应该很熟悉了。 &lt;a href=&#34;http://linuxbrew.sh&#34;&gt;Linuxbrew&lt;/a&gt; 是 Linux 下的 Homebrew ，使用它，就可以用 &lt;code&gt;brew install&lt;/code&gt; 安装更多的软件。&lt;/p&gt;
+
+&lt;p&gt;也许有人要问，各个 Linux 发行版都已经 &lt;strong&gt;自带了「包管理工具」&lt;/strong&gt; ，为什么还要多此一举，用 Linuxbrew 呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>自制卤肉</title>
+      <link>https://scallee.github.io/blog/post/homemade-lurou/</link>
+      <pubDate>Wed, 27 Feb 2019 07:35:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/homemade-lurou/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.xiachufang.com/recipe/100410171/&#34;&gt;【靠谱的自制卤水的做法视频_做法步骤】_下厨房&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;去年 12 月，听了曲哥的建议，烧了一锅卤水。我的第一锅卤水，是用几块牛筒骨炖出来的，卤料直接用的是「李锦记」的。此后，每隔几日便卤点东西，卤五花肉，卤排骨，卤牛肉，卤鸡翅，卤鸡腿，卤鸡爪，还有卤鸡蛋。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2019 年 1 月 - 关于「每月记录」的思考</title>
+      <link>https://scallee.github.io/blog/post/review-2019-01/</link>
+      <pubDate>Sun, 03 Feb 2019 07:36:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2019-01/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+&lt;h2 id=&#34;博文&#34;&gt;博文&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.xianmin.org/post/goodbye-2018/&#34;&gt;别了， 2018 ！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.xianmin.org/post/unforgettable-find-dog/&#34;&gt;一次难忘的寻狗&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;关于-每月记录-的一点思考&#34;&gt;关于「每月记录」的一点思考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ferrucc.io/posts/starting-a-blog/&#34;&gt;ferrucc.io | Everything I&amp;rsquo;ve learned in 10 years of Blogging&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个链接，是一位 21 岁的博主的分享，他已经写了 10 年的博客了。&lt;/p&gt;
+
+&lt;p&gt;有两天，我在思考自己目前这个博客的「核心内容」的问题。即，我应该专注于哪方面的内容输出？我的文字要面向的读者是谁？目前博客的内容是不是有些太随性了？比如这个「每月记录」的意义在哪儿？这些问题，我还在思考。毫无疑问，一个博客是需要有读者的，否则，我又何必放到网上呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一次难忘的寻狗</title>
+      <link>https://scallee.github.io/blog/post/unforgettable-find-dog/</link>
+      <pubDate>Mon, 21 Jan 2019 07:55:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/unforgettable-find-dog/</guid>
+      <description>&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/other/kaka-and-baihe.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/other/kaka-and-baihe.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;左，卡卡；右，百合&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;百合，金毛，母狗，8岁。卡卡，边牧和二哈的串儿，公狗，3岁。这两条狗在我们旅舍非常受欢迎。&lt;/p&gt;
+
+&lt;p&gt;13 日，腊八节，晚上 12 点，送走最后一位聚餐的朋友，我才发现两条狗不见了，而前一个小时还是在的。我当时感到有些愤怒，这俩小家伙这么晚了还跑出去，估计又是跑去后面的田地里了。我去寻找，外面漆黑一片，拿着手电找了一圈，没有找到。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>别了， 2018 ！</title>
+      <link>https://scallee.github.io/blog/post/goodbye-2018/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/goodbye-2018/</guid>
+      <description>&lt;p&gt;一年又过去了，我重新看了下与你在 2017 年末（&lt;a href=&#34;https://www.xianmin.org/post/2017/&#34;&gt;别了，2017！&lt;/a&gt;）的交流，再回顾这刚过去的 2018 年，我应该对你说些什么呢？&lt;/p&gt;
+
+&lt;p&gt;现在，我将对你的 2018 年终总结分为四大类：修行、工作、锻炼、学习。「学习」下面分为四小类：编程、英语、写作、阅读。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2018 年 12 月 - 意外</title>
+      <link>https://scallee.github.io/blog/post/review-2018-12/</link>
+      <pubDate>Mon, 31 Dec 2018 05:50:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2018-12/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/memory/2018/1200.jpg&#34; alt=&#34;曲哥为我们带来了 2018 年最后的温暖&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/memory/2018/1200.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;
+          &lt;p&gt;曲哥为我们带来了 2018 年最后的温暖&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>我的 2018 年阅读总结</title>
+      <link>https://scallee.github.io/blog/post/2018-read/</link>
+      <pubDate>Fri, 28 Dec 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/2018-read/</guid>
+      <description>&lt;p&gt;本文分两部分，前半部分是反思，后半部分是值得推荐的书。&lt;/p&gt;
+
+&lt;p&gt;回顾这一年读的书，依旧不多。老问题依旧存在：记录不够，输出太少。&lt;/p&gt;
+
+&lt;p&gt;有一些翻看过的书，由于没有记录，没有什么印象了。&lt;/p&gt;
+
+&lt;p&gt;英文书只读了两本，同样是老问题：太简单的书觉得没什么意思，有趣的书读起来又太费劲。提升英语能力是关键。&lt;/p&gt;
+
+&lt;p&gt;有些奇怪，今年都没怎么看计算机相关的书，回想起来，应该只是翻文档去了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>《七堂思维成长课》大纲笔记</title>
+      <link>https://scallee.github.io/blog/post/note-how-to-have-a-good-day/</link>
+      <pubDate>Tue, 25 Dec 2018 04:56:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/note-how-to-have-a-good-day/</guid>
+      <description>框架 1. 学科基础： 心理学、行为经济学、神经科学 2. 三个基础知识点 2.1 双系统大脑 深思熟虑系统：前额皮层 推理、自我控制、前瞻思维 容量小、运转速度慢 无意</description>
+    </item>
+    
+    <item>
+      <title>我的阅读经历——从「网络文学」开始</title>
+      <link>https://scallee.github.io/blog/post/my-read-experience-beginning/</link>
+      <pubDate>Tue, 11 Dec 2018 02:48:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/my-read-experience-beginning/</guid>
+      <description>&lt;h2 id=&#34;1-dot-网瘾少年&#34;&gt;1. 网瘾少年&lt;/h2&gt;
+
+&lt;p&gt;在我 10 至 13 岁这几年，因为沉迷网络游戏，偷家里的钱去泡网吧，经常被母亲教训，并多次被赶出家门。直至有一次我铁了心不再回家，身无分文离家两个月，此间辛酸不必多言。家人用尽各种办法，登电视，登报纸，贴寻人启事，最终将我找到。回去后，我痛定思痛，答应父母答应老师，一定改过自新，再也不玩网游。谁知才过一个多月，网瘾又犯。我无法控制自己，并深知对不起父母和老师，又一次离家出走。母亲已经对我彻底绝望，父亲坚持要把我找回来。我在外面处处碰壁，半个月后，父亲带着我回了家。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2018 年 11 月 - 执行意图</title>
+      <link>https://scallee.github.io/blog/post/review-2018-11/</link>
+      <pubDate>Fri, 30 Nov 2018 16:12:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2018-11/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/memory/2018/1100.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/memory/2018/1100.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;卡卡一家&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>从泸沽湖到宝山石头城</title>
+      <link>https://scallee.github.io/blog/post/2018-lugu-lake/</link>
+      <pubDate>Fri, 30 Nov 2018 15:20:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/2018-lugu-lake/</guid>
+      <description>&lt;p&gt;在丽江待了这么多年，却一直没有去过泸沽湖。原因嘛，无非是我不喜欢去景点，尤其是大家都去的景点。我的偏好是，要么在路上，要么就在一个地方待着，逛景点也就是看看风景，有时候路上的风景或许比景点更美呢。&lt;/p&gt;
+
+&lt;p&gt;不过这个月月底，终于还是去了一趟泸沽湖，顺带还去了宝山石头城。这次比较特殊的是和几个熟悉的朋友一同出行，实在难得，一块儿吃喝玩乐，聊聊生活，增进一下友谊。&lt;/p&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/lugu-lake/00.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/lugu-lake/00.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;泸沽湖边飞翔的鸟儿&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2018 年 10 月 - 音乐会</title>
+      <link>https://scallee.github.io/blog/post/review-2018-10/</link>
+      <pubDate>Wed, 31 Oct 2018 15:15:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2018-10/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/memory/2018/1000.jpg&#34; alt=&#34;我们旅舍二楼的风景&#34;/&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/memory/2018/1000.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;玉龙雪山&lt;/h4&gt;
+          &lt;p&gt;我们旅舍二楼的风景&lt;/p&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>浅谈冥想（或者说正念）——反抗痛苦的方法</title>
+      <link>https://scallee.github.io/blog/post/talk-about-mindfulness/</link>
+      <pubDate>Fri, 12 Oct 2018 08:06:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/talk-about-mindfulness/</guid>
+      <description>&lt;p&gt;这一年多，「冥想」对我的帮助非常大。主要体现在：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;减少了我的「痛苦」。&lt;/li&gt;
+&lt;li&gt;降低了我的「焦虑」。&lt;/li&gt;
+&lt;li&gt;提高了我的「专注力」。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;另外，从实际行动层面：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;我开始了我的博客，尽管目前有价值的内容还不是很多。&lt;/li&gt;
+&lt;li&gt;我开始真正使用 Github 。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;翻了翻邮箱，我曾经在三年前与 ZH 、 LM 两位老师多次谈过我的痛苦和焦虑，见 &lt;a href=&#34;#附一-关于痛苦的一些信件摘录&#34;&gt;附一：关于痛苦的一些信件摘录&lt;/a&gt; 。今年我的状态明显好了很多。&lt;/p&gt;
+
+&lt;p&gt;我想在这篇文章里， &lt;strong&gt;简单谈一谈「冥想」&lt;/strong&gt; 。本着对读者负责的态度，有几点需要说明的：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;本篇文章只是我个人小小的分享。&lt;/li&gt;
+&lt;li&gt;我个人真正「实践冥想」只是近一年左右的事情，我还是一个初学者，所分享的内容仅限于我 &lt;strong&gt;个人的感悟和理解&lt;/strong&gt; 。&lt;/li&gt;
+&lt;li&gt;我不是「利益相关者」，我的分享只是因为 &lt;strong&gt;它对我有帮助&lt;/strong&gt; ，也希望对你有帮助。&lt;/li&gt;
+&lt;li&gt;有关冥想、以及其疗效的严谨学术研究并不多。&amp;nbsp;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-1&#34;&gt;&lt;a href=&#34;#fn:fn-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;不过呢，关于人体的奥秘，目前还有非常多科学无法解释的东西。&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2018 年 9 月 - 专注两个身份</title>
+      <link>https://scallee.github.io/blog/post/review-2018-09/</link>
+      <pubDate>Sun, 30 Sep 2018 14:40:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2018-09/</guid>
+      <description>&lt;p&gt;这里记录过去一个月，我个人的总结与回顾。&lt;/p&gt;
+
+
+
+&lt;div class=&#34;box&#34;&gt;
+&lt;figure  itemprop=&#34;associatedMedia&#34;
+  itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
+    &lt;div class=&#34;img&#34;&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/memory/2018/0908.jpg&#34; /&gt;
+    &lt;/div&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog/image/memory/2018/0908.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+      &lt;figcaption&gt;&lt;h4&gt;那里中秋的月亮&lt;/h4&gt;
+      &lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>英语学习方法总结 —— 2018 年 9 月</title>
+      <link>https://scallee.github.io/blog/post/plan-english-2018/</link>
+      <pubDate>Fri, 28 Sep 2018 22:38:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/plan-english-2018/</guid>
+      <description>本篇文章旨在对自己的英语学习方法做一个总结。 我的目标 所以对于所有想提高英语的同学，我给大家的建议是，在人云亦云的决定提高英语之前问自己这样几</description>
+    </item>
+    
+    <item>
+      <title>我所使用的计算机软件</title>
+      <link>https://scallee.github.io/blog/post/my-linux-app-list/</link>
+      <pubDate>Thu, 20 Sep 2018 14:45:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/my-linux-app-list/</guid>
+      <description>&lt;p&gt;本篇文章将对 &lt;strong&gt;我平时所使用的计算机软件做一个归纳整理&lt;/strong&gt; 。&lt;/p&gt;
+
+&lt;p&gt;我大部分时候使用的操作系统是 &lt;strong&gt;Deepin Linux&lt;/strong&gt; ，因此以下所列出的软件 &lt;strong&gt;也许在 Windows 和 Mac 下并不适用&lt;/strong&gt; 。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录： 2018 年 8 月 - 开始</title>
+      <link>https://scallee.github.io/blog/post/review-2018-08/</link>
+      <pubDate>Sun, 02 Sep 2018 20:57:00 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/post/review-2018-08/</guid>
+      <description>&lt;p&gt;上个月发生了太多事情。我想从本月开始，对每个月度做点记录，算是总结与回顾吧。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

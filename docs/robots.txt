@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://scallee.github.io/blog/sitemap.xml
