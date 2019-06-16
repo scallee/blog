@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SpringBoot使用读写分离数据源 - 轨迹的印痕</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="轨迹的印痕" /><meta name="description" content="SpringBoot使用读写分离数据源" />
+<meta name="keywords" content="springboot, 读写分离" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.5" />
+
+
+<link rel="canonical" href="https://scallee.github.io/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/" />
+
+
+
+<link rel="icon" href="/blog/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/blog/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+
+
+
+
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+<meta property="og:title" content="SpringBoot使用读写分离数据源" />
+<meta property="og:description" content="SpringBoot使用读写分离数据源" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://scallee.github.io/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/" />
+<meta property="article:published_time" content="2019-06-16T21:44:38&#43;08:00"/>
+<meta property="article:modified_time" content="2019-06-16T21:44:38&#43;08:00"/>
+
+<meta itemprop="name" content="SpringBoot使用读写分离数据源">
+<meta itemprop="description" content="SpringBoot使用读写分离数据源">
+
+
+<meta itemprop="datePublished" content="2019-06-16T21:44:38&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-16T21:44:38&#43;08:00" />
+<meta itemprop="wordCount" content="2732">
+
+
+
+<meta itemprop="keywords" content="springboot,java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SpringBoot使用读写分离数据源"/>
+<meta name="twitter:description" content="SpringBoot使用读写分离数据源"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/blog/" class="logo">轨迹的印痕</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/post/">全部文章</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/about/">关于</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/index.xml">订阅</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/blog/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/blog/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/blog/" class="logo">
+    
+      轨迹的印痕
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/">主页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/post/">全部文章</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://scallee.github.io/blog/index.xml">订阅</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">SpringBoot使用读写分离数据源</h1>
+      
+      <div class="post-meta">
+        <time datetime="2019-06-16" class="post-time">
+          2019-06-16
+        </time>
+        <div class="post-category">
+            <a href="https://scallee.github.io/blog/categories/java/"> java </a>
+            <a href="https://scallee.github.io/blog/categories/springboot/"> springboot </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#springboot使用读写分离数据源">SpringBoot使用读写分离数据源</a>
+<ul>
+<li><a href="#abstractroutingdatasource">AbstractRoutingDataSource</a>
+<ul>
+<li><a href="#总结">总结</a></li>
+<li><a href="#思路">思路</a></li>
+</ul></li>
+<li><a href="#dynamicdatasourceholder">DynamicDataSourceHolder</a></li>
+<li><a href="#dynamicdatasource">DynamicDataSource</a></li>
+<li><a href="#dynamicdatasourceconfig">DynamicDataSourceConfig</a></li>
+<li><a href="#dynamicdatasourceconfiguration">DynamicDataSourceConfiguration</a></li>
+<li><a href="#daynamicdatasouceaop">DaynamicDatasouceAop</a></li>
+<li><a href="#搞定">搞定</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <h2 id="springboot使用读写分离数据源">SpringBoot使用读写分离数据源</h2>
+
+<p>本文来源：<a href="https://springboot.io/t/topic/49">https://springboot.io/t/topic/49</a></p>
+
+<blockquote>
+<p>网站应用的瓶颈大多在DB，DB的性能直接的决定了网站的负载能力。一般的b/s应用。读请求数量大于写请求，于是可以通过读写分离来把读请求负载到多个数据源中（一主N从）。在并发过大的时候，读写分离就能为应用带来一定的性能提升。
+读写分离不是特别复杂的技术，可以通过中间件或者自己编码实现。可幸<code>Spring</code>框架已经提供了动态数据源的这种机制</p>
+</blockquote>
+
+<h3 id="abstractroutingdatasource">AbstractRoutingDataSource</h3>
+
+<ul>
+<li>可以路由的数据源，这是一个抽象类。本身已经实现了java的数据源接口<code>javax.sql.DataSource</code>，使用它来替换传统单一的数据源。从而达到动态数据源的效果</li>
+<li>该类内部维护了一个Map，该map存储着系统的所有数据源</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Nullable</span>
+<span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">DataSource</span><span class="o">&gt;</span> <span class="n">resolvedDataSources</span><span class="o">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>唯一的抽象方法</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/**
+</span><span class="cm"> * Determine the current lookup key. This will typically be
+</span><span class="cm"> * implemented to check a thread-bound transaction context.
+</span><span class="cm"> * &lt;p&gt;Allows for arbitrary keys. The returned key needs
+</span><span class="cm"> * to match the stored lookup key type, as resolved by the
+</span><span class="cm"> * {@link #resolveSpecifiedLookupKey} method.
+</span><span class="cm">*/</span>
+<span class="nd">@Nullable</span>
+<span class="kd">protected</span> <span class="kd">abstract</span> <span class="n">Object</span> <span class="nf">determineCurrentLookupKey</span><span class="o">();</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="总结">总结</h4>
+
+<ul>
+<li>其实最为关键的两个点已经说清楚了，所有的数据源存放在<code>resolvedDataSources</code>中，里面包含了一个主数据源，以及N多个从数据源</li>
+<li>在系统需要操作数据源的时候，先调用<code>determineCurrentLookupKey()</code>来获取数据源的key，从而确定要使用<code>resolvedDataSources</code>中的哪个数据源。</li>
+</ul>
+
+<h4 id="思路">思路</h4>
+
+<ul>
+<li>既然是读写分离，我们该怎么确定当前请求是读还是写？可以考虑通过<code>@Transactional</code>注解来判断，如果<code>readOnly=true</code>，则是读请求，反之这是写请求。当然也可以通过自己定义注解来实现</li>
+<li>确定了怎么区分读写请求后，剩下的事情应该确定怎么从N个从库中选择一个出来处理读请求。很简单 - 轮询。这是最直接简单的办法。</li>
+<li>通过程序日志可以看到，在执行<code>@Transactional</code>方法之前，会先从数据源获取jdbc的连接，在系统获取jdbc连接之前，会调用<code>determineCurrentLookupKey()</code>来获取数据源key，根据该key获得数据源，再从该数据源获取到连接。</li>
+<li>所以我们要做的就是，覆写<code>determineCurrentLookupKey()</code>方法，在系统获取jdbc连接之前（执行<code>@Transactional</code>），确定本次请求使用的Datasource</li>
+</ul>
+
+<h3 id="dynamicdatasourceholder">DynamicDataSourceHolder</h3>
+
+<ul>
+<li>该类维护了一个线程安全的map，<code>ThreadLocal</code>，用来标识当前请求是读还是写。从而确定是使用主库还是从库</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DynamicDataSourceHolder</span> <span class="o">{</span>
+	
+	<span class="c1">//定义主库的key
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">MASTER</span> <span class="o">=</span> <span class="s">&#34;master&#34;</span><span class="o">;</span>
+	
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">SLAVE</span> <span class="o">=</span> <span class="s">&#34;slave&#34;</span><span class="o">;</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">HOLDER</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ThreadLocal</span><span class="o">&lt;&gt;();</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">putDataSourceKey</span><span class="o">(</span><span class="n">String</span> <span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">HOLDER</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">key</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">getDataSourceKey</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">HOLDER</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+    <span class="o">}</span>
+    
+	<span class="c1">//标记为主库
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">markMaster</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">putDataSourceKey</span><span class="o">(</span><span class="n">MASTER</span><span class="o">);</span>
+    <span class="o">}</span>
+	<span class="c1">//标签为从库
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">markSlave</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">putDataSourceKey</span><span class="o">(</span><span class="n">SLAVE</span><span class="o">);</span>
+    <span class="o">}</span>
+
+	<span class="c1">//判断是否是主库
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isMaster</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">MASTER</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">HOLDER</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="dynamicdatasource">DynamicDataSource</h3>
+
+<ul>
+<li><code>AbstractRoutingDataSource</code>的实现</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.util.ReflectionUtils</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">javax.sql.DataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.reflect.Field</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.concurrent.atomic.AtomicInteger</span><span class="o">;</span>
+
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DynamicDataSource</span> <span class="kd">extends</span> <span class="n">AbstractRoutingDataSource</span> <span class="o">{</span>
+
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">DynamicDataSource</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+	<span class="c1">//int的原子操纵类，在多线程环境下可以安全的自增，初始值设置为 -1
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="n">AtomicInteger</span> <span class="n">counter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AtomicInteger</span><span class="o">(-</span><span class="n">1</span><span class="o">);</span>
+
+	<span class="c1">//存放从库的key
+</span><span class="c1"></span>    <span class="kd">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">&gt;</span> <span class="n">slaveDataSources</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">0</span><span class="o">);</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="n">Object</span> <span class="nf">determineCurrentLookupKey</span><span class="o">()</span> <span class="o">{</span>
+		
+        <span class="n">Object</span> <span class="n">key</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">isMaster</span><span class="o">()</span> <span class="o">||</span> <span class="k">this</span><span class="o">.</span><span class="na">slaveDataSources</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+			<span class="c1">//如果当前请求是写请求，并且没有任何的从库，返回主库的key
+</span><span class="c1"></span>            <span class="n">key</span> <span class="o">=</span> <span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">MASTER</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+			<span class="c1">//否则轮询从库的key
+</span><span class="c1"></span>            <span class="n">key</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">getSlaveKey</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">LOGGER</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">&#34;动态数据源 dataSourceKey = {}&#34;</span><span class="o">,</span> <span class="n">key</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">key</span><span class="o">;</span>
+    <span class="o">}</span>
+	<span class="c1">//AbstractRoutingDataSource 实现了 InitializingBean 接口，所以在属性注入完毕后会执行该方法
+</span><span class="c1"></span>	<span class="c1">//通过覆写该方法获，从 resolvedDataSources 中获取到所有的从库
+</span><span class="c1"></span>    <span class="nd">@SuppressWarnings</span><span class="o">(</span><span class="s">&#34;unchecked&#34;</span><span class="o">)</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">afterPropertiesSet</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">afterPropertiesSet</span><span class="o">();</span>
+        <span class="n">Field</span> <span class="n">field</span> <span class="o">=</span> <span class="n">ReflectionUtils</span><span class="o">.</span><span class="na">findField</span><span class="o">(</span><span class="n">AbstractRoutingDataSource</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="s">&#34;resolvedDataSources&#34;</span><span class="o">);</span>
+		<span class="c1">//resolvedDataSources 是 private 属性，设置暴力访问
+</span><span class="c1"></span>        <span class="n">field</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span> 
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">Map</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">DataSource</span><span class="o">&gt;</span> <span class="n">resolvedDataSources</span> <span class="o">=</span> <span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">DataSource</span><span class="o">&gt;)</span> <span class="n">field</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+            <span class="k">for</span> <span class="o">(</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">DataSource</span><span class="o">&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">resolvedDataSources</span><span class="o">.</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">MASTER</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">()))</span> <span class="o">{</span>
+					<span class="c1">//如果数据源的key与master库的key相同，跳过
+</span><span class="c1"></span>                    <span class="k">continue</span><span class="o">;</span>
+                <span class="o">}</span>
+				<span class="c1">//添加 从库的key 到集合
+</span><span class="c1"></span>                <span class="n">slaveDataSources</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">());</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">LOGGER</span><span class="o">.</span><span class="na">error</span><span class="o">(</span><span class="s">&#34;afterPropertiesSet error! &#34;</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+	
+	<span class="c1">//轮询从库key
+</span><span class="c1"></span>    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">getSlaveKey</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Integer</span> <span class="n">index</span> <span class="o">=</span> <span class="n">counter</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">()</span> <span class="o">%</span> <span class="k">this</span><span class="o">.</span><span class="na">slaveDataSources</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">counter</span><span class="o">.</span><span class="na">get</span><span class="o">()</span> <span class="o">&gt;</span> <span class="n">9999</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">counter</span><span class="o">.</span><span class="na">set</span><span class="o">(-</span><span class="n">1</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">slaveDataSources</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">index</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="dynamicdatasourceconfig">DynamicDataSourceConfig</h3>
+
+<ul>
+<li>配置类，为了方便通过配置文件来定义数据源。</li>
+<li>这里使用的阿里巴巴的<code>Druid</code>数据源</li>
+<li>不是很明白<code>@ConfigurationProperties</code>干啥的，先百度</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.springframework.boot.context.properties.ConfigurationProperties</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.alibaba.druid.pool.DruidDataSource</span><span class="o">;</span>
+
+
+<span class="nd">@ConfigurationProperties</span><span class="o">(</span><span class="n">prefix</span> <span class="o">=</span> <span class="s">&#34;daynamic&#34;</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DynamicDataSourceConfig</span> <span class="o">{</span>
+	
+	<span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">DruidDataSource</span><span class="o">&gt;</span> <span class="n">datasources</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+	
+	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">DruidDataSource</span><span class="o">&gt;</span> <span class="nf">getDatasources</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="n">datasources</span><span class="o">;</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setDatasources</span><span class="o">(</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">DruidDataSource</span><span class="o">&gt;</span> <span class="n">datasources</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">this</span><span class="o">.</span><span class="na">datasources</span> <span class="o">=</span> <span class="n">datasources</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><p>yml的配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">daynamic:
+datasources:
+# master库,唯一只能有一个且名称不可修改（DynamicDataSourceHolder中的MASTER的定义相同）
+master:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;useSSL=false
+  username: root
+  password: root
+
+# slave库,名称唯一可以有多个
+slave_1:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:33006/springcloud?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;useSSL=false
+  username: root
+  password: root
+    
+slave_2:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;useSSL=false
+  username: root
+  password: root</pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h3 id="dynamicdatasourceconfiguration">DynamicDataSourceConfiguration</h3>
+
+<ul>
+<li>通过<code>@Configuration</code>把数据源配置到ioc</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.sql.SQLException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.boot.context.properties.EnableConfigurationProperties</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Bean</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.context.annotation.Configuration</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.alibaba.druid.pool.DruidDataSource</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">io.springcloud.datasource.DynamicDataSource</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">io.springcloud.datasource.DynamicDataSourceConfig</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">io.springcloud.datasource.DynamicDataSourceHolder</span><span class="o">;</span>
+
+<span class="cm">/**
+</span><span class="cm"> * 
+</span><span class="cm"> * 读写分离数据源
+</span><span class="cm"> * @author KevinBlandy
+</span><span class="cm"> *
+</span><span class="cm"> */</span>
+
+<span class="nd">@Configuration</span>
+<span class="nd">@EnableConfigurationProperties</span><span class="o">(</span><span class="n">DynamicDataSourceConfig</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>		<span class="c1">//载入yml配置到配置类
+</span><span class="c1"></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DynamicDataSourceConfiguration</span> <span class="o">{</span>
+	
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">DynamicDataSourceConfiguration</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+	
+	<span class="nd">@Autowired</span>
+	<span class="kd">private</span> <span class="n">DynamicDataSourceConfig</span> <span class="n">dynamicDataSourceConfig</span><span class="o">;</span>
+	
+	<span class="nd">@Bean</span>
+	<span class="kd">public</span> <span class="n">DynamicDataSource</span> <span class="nf">dynamicDataSource</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">SQLException</span> <span class="o">{</span>
+		
+		<span class="c1">//定义数据源
+</span><span class="c1"></span>		<span class="n">DynamicDataSource</span> <span class="n">dynamicDataSource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DynamicDataSource</span><span class="o">();</span>
+		
+		<span class="c1">//定义数据源map
+</span><span class="c1"></span>		<span class="n">Map</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">dataSources</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+		
+		<span class="k">for</span><span class="o">(</span><span class="n">Map</span><span class="o">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">DruidDataSource</span><span class="o">&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">dynamicDataSourceConfig</span><span class="o">.</span><span class="na">getDatasources</span><span class="o">().</span><span class="na">entrySet</span><span class="o">())</span> <span class="o">{</span>
+			
+			<span class="n">String</span> <span class="n">key</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">();</span>
+			
+			<span class="n">DruidDataSource</span> <span class="n">dataSource</span> <span class="o">=</span> <span class="n">entry</span><span class="o">.</span><span class="na">getValue</span><span class="o">();</span>
+			
+			<span class="k">if</span><span class="o">(!</span><span class="n">key</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">MASTER</span><span class="o">))</span> <span class="o">{</span>
+				<span class="c1">//如果是从库，则添加到map
+</span><span class="c1"></span>				<span class="n">dataSources</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">key</span><span class="o">,</span> <span class="n">dataSource</span><span class="o">);</span>
+			<span class="o">}</span>
+			
+			<span class="c1">//初始化数据源
+</span><span class="c1"></span>			<span class="n">dataSource</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+			
+			<span class="n">LOGGER</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">&#34;数据源初始化:key={}&#34;</span><span class="o">,</span><span class="n">key</span><span class="o">);</span>
+		<span class="o">}</span>
+		
+		<span class="c1">//尝试从配置中获取到主库
+</span><span class="c1"></span>		<span class="n">DruidDataSource</span> <span class="n">masterDataSource</span> <span class="o">=</span> <span class="n">dynamicDataSourceConfig</span><span class="o">.</span><span class="na">getDatasources</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">MASTER</span><span class="o">);</span>
+		
+		<span class="k">if</span><span class="o">(</span><span class="n">masterDataSource</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="s">&#34;未定义,master库(&#34;</span> <span class="o">+</span> <span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">MASTER</span> <span class="o">+</span> <span class="s">&#34;)&#34;</span><span class="o">);</span>
+		<span class="o">}</span>
+		
+		<span class="c1">//添加主库到map
+</span><span class="c1"></span>		<span class="n">dataSources</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">MASTER</span><span class="o">,</span> <span class="n">masterDataSource</span><span class="o">);</span>
+		
+		<span class="c1">//设置动态数据源默认使用的库为主库
+</span><span class="c1"></span>		<span class="n">dynamicDataSource</span><span class="o">.</span><span class="na">setDefaultTargetDataSource</span><span class="o">(</span><span class="n">masterDataSource</span><span class="o">);</span>
+		<span class="c1">//设置数据源map
+</span><span class="c1"></span>		<span class="n">dynamicDataSource</span><span class="o">.</span><span class="na">setTargetDataSources</span><span class="o">(</span><span class="n">dataSources</span><span class="o">);</span>
+		
+		<span class="k">return</span> <span class="n">dynamicDataSource</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="daynamicdatasouceaop">DaynamicDatasouceAop</h3>
+
+<ul>
+<li>最后我们通过 <code>AOP</code>在业务层方法执行之前，确定当前请求是读还是写</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.lang.reflect.Method</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.reflect.ParameterizedType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.reflect.Type</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.aspectj.lang.JoinPoint</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.Aspect</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.Before</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.aspectj.lang.annotation.Pointcut</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.aspectj.lang.reflect.MethodSignature</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.core.annotation.Order</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.stereotype.Component</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.springframework.transaction.annotation.Transactional</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">io.springcloud.datasource.DynamicDataSourceHolder</span><span class="o">;</span>
+
+<span class="nd">@Order</span><span class="o">(-</span><span class="n">9999</span><span class="o">)</span>		<span class="c1">//它必须优先于业务层的所有切面方法之前执行
+</span><span class="c1"></span><span class="nd">@Aspect</span>
+<span class="nd">@Component</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DaynamicDatasouceAop</span> <span class="o">{</span>
+	
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">LOGGER</span> <span class="o">=</span> <span class="n">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">DaynamicDatasouceAop</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+	
+	<span class="c1">//切面定义，业务层的所有类的所有方法
+</span><span class="c1"></span>	<span class="nd">@Pointcut</span><span class="o">(</span><span class="n">value</span> <span class="o">=</span> <span class="s">&#34;execution(* io.springcloud.service.*.*(..))&#34;</span><span class="o">)</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">service</span><span class="o">()</span> <span class="o">{</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Before</span><span class="o">(</span><span class="s">&#34;service()&#34;</span><span class="o">)</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">beforService</span><span class="o">(</span><span class="n">JoinPoint</span> <span class="n">joinPoint</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">NoSuchMethodException</span><span class="o">,</span> <span class="n">SecurityException</span> <span class="o">{</span>
+		
+		<span class="n">Object</span> <span class="n">target</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getTarget</span><span class="o">();</span>
+		
+		<span class="n">String</span> <span class="n">methodName</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+		
+		<span class="n">Object</span><span class="o">[]</span> <span class="n">args</span> <span class="o">=</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getArgs</span><span class="o">();</span>
+		
+		<span class="n">Class</span><span class="o">&lt;?&gt;[]</span> <span class="n">parameterTypes</span> <span class="o">=</span> <span class="o">((</span><span class="n">MethodSignature</span><span class="o">)</span> <span class="n">joinPoint</span><span class="o">.</span><span class="na">getSignature</span><span class="o">()).</span><span class="na">getMethod</span><span class="o">().</span><span class="na">getParameterTypes</span><span class="o">();</span>
+		
+		<span class="c1">//目标方法
+</span><span class="c1"></span>		<span class="n">Method</span> <span class="n">method</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+		
+		<span class="n">method</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getMethod</span><span class="o">(</span><span class="n">methodName</span><span class="o">,</span> <span class="n">parameterTypes</span><span class="o">);</span>
+		
+		<span class="k">if</span> <span class="o">(</span><span class="n">method</span><span class="o">.</span><span class="na">isBridge</span><span class="o">())</span> <span class="o">{</span>
+			<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">args</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+				<span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">genClazz</span> <span class="o">=</span> <span class="n">getSuperClassGenricType</span><span class="o">(</span><span class="n">target</span><span class="o">.</span><span class="na">getClass</span><span class="o">(),</span> <span class="n">0</span><span class="o">);</span>
+				<span class="k">if</span> <span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">getClass</span><span class="o">().</span><span class="na">isAssignableFrom</span><span class="o">(</span><span class="n">genClazz</span><span class="o">))</span> <span class="o">{</span>
+					<span class="n">parameterTypes</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">genClazz</span><span class="o">;</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+			<span class="n">method</span> <span class="o">=</span> <span class="n">target</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getMethod</span><span class="o">(</span><span class="n">methodName</span><span class="o">,</span> <span class="n">parameterTypes</span><span class="o">);</span>
+		<span class="o">}</span>
+		
+		<span class="n">LOGGER</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">&#34;当前事务方法  &#34;</span> <span class="o">+</span> <span class="n">methodName</span><span class="o">);</span>
+		
+		<span class="n">Transactional</span> <span class="n">transactional</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="na">getAnnotation</span><span class="o">(</span><span class="n">Transactional</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+		<span class="c1">//未标识@Transactional注解，或者事务非只读，则标识主库
+</span><span class="c1"></span>		<span class="k">if</span><span class="o">(</span><span class="n">transactional</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">transactional</span><span class="o">.</span><span class="na">readOnly</span><span class="o">()){</span>
+			<span class="n">LOGGER</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">&#34;动态数据源 - 读库&#34;</span><span class="o">);</span>
+			<span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">markSlave</span><span class="o">();</span>
+		<span class="o">}</span><span class="k">else</span> <span class="o">{</span>
+			<span class="n">LOGGER</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">&#34;动态数据源 - 写库&#34;</span><span class="o">);</span>
+			<span class="n">DynamicDataSourceHolder</span><span class="o">.</span><span class="na">markMaster</span><span class="o">();</span>
+		<span class="o">}</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">getSuperClassGenricType</span><span class="o">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span><span class="o">,</span> <span class="kt">int</span> <span class="n">index</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">Type</span> <span class="n">genType</span> <span class="o">=</span> <span class="n">clazz</span><span class="o">.</span><span class="na">getGenericSuperclass</span><span class="o">();</span>
+		<span class="k">if</span> <span class="o">(!(</span><span class="n">genType</span> <span class="k">instanceof</span> <span class="n">ParameterizedType</span><span class="o">))</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="n">Type</span><span class="o">[]</span> <span class="n">params</span> <span class="o">=</span> <span class="o">((</span><span class="n">ParameterizedType</span><span class="o">)</span> <span class="n">genType</span><span class="o">).</span><span class="na">getActualTypeArguments</span><span class="o">();</span>
+		<span class="k">if</span> <span class="o">(!(</span><span class="n">params</span><span class="o">[</span><span class="n">index</span><span class="o">]</span> <span class="k">instanceof</span> <span class="n">Class</span><span class="o">))</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">;</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="o">(</span><span class="n">Class</span><span class="o">&lt;?&gt;)</span> <span class="n">params</span><span class="o">[</span><span class="n">index</span><span class="o">];</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="搞定">搞定</h3>
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://scallee.github.io/blog/tags/springboot/">springboot</a>
+          <a href="https://scallee.github.io/blog/tags/java/">java</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/blog/post/centos7-install-jdk-sh/">
+            <span class="next-text nav-default">Centos7安装jdk脚本</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="https://github.com/scallee/blog" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+
+
+<a href="https://scallee.github.io/blog/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2019
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        轨迹的印痕
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/blog/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/blog/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/blog/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/blog/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/blog/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/blog/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/blog/js/custom.js"></script>
+
+
+</body>
+</html>

@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 16 Jun 2019 20:58:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jun 2019 21:44:38 +0800</lastBuildDate>
     
 	<atom:link href="https://scallee.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java</title>
+      <link>https://scallee.github.io/blog/categories/java/</link>
+      <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>springboot</title>
+      <link>https://scallee.github.io/blog/categories/springboot/</link>
+      <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog/categories/springboot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>redis</title>

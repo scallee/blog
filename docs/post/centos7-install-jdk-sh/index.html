@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Redis Cluster Start - 轨迹的印痕</title>
+  <title>Centos7安装jdk脚本 - 轨迹的印痕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,8 +22,8 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="轨迹的印痕" /><meta name="description" content="最简单的redis集群cluster模式启动脚本" />
-<meta name="keywords" content="redis, linux" />
+<meta name="author" content="轨迹的印痕" /><meta name="description" content="一键安装jdk" />
+<meta name="keywords" content="java, jdk" />
 
 
 
@@ -34,7 +34,7 @@
 <meta name="generator" content="Hugo 0.55.5" />
 
 
-<link rel="canonical" href="https://scallee.github.io/blog/post/redis-cluster-start/" />
+<link rel="canonical" href="https://scallee.github.io/blog/post/centos7-install-jdk-sh/" />
 
 
 
@@ -58,27 +58,27 @@
 <link rel="stylesheet" href="/blog/css/custom.css">
 
 
-<meta property="og:title" content="Redis Cluster Start" />
-<meta property="og:description" content="最简单的redis集群cluster模式启动脚本" />
+<meta property="og:title" content="Centos7安装jdk脚本" />
+<meta property="og:description" content="一键安装jdk" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://scallee.github.io/blog/post/redis-cluster-start/" />
-<meta property="article:published_time" content="2019-06-16T20:58:58&#43;08:00"/>
-<meta property="article:modified_time" content="2019-06-16T20:58:58&#43;08:00"/>
+<meta property="og:url" content="https://scallee.github.io/blog/post/centos7-install-jdk-sh/" />
+<meta property="article:published_time" content="2019-06-16T21:16:32&#43;08:00"/>
+<meta property="article:modified_time" content="2019-06-16T21:16:32&#43;08:00"/>
 
-<meta itemprop="name" content="Redis Cluster Start">
-<meta itemprop="description" content="最简单的redis集群cluster模式启动脚本">
-
-
-<meta itemprop="datePublished" content="2019-06-16T20:58:58&#43;08:00" />
-<meta itemprop="dateModified" content="2019-06-16T20:58:58&#43;08:00" />
-<meta itemprop="wordCount" content="150">
+<meta itemprop="name" content="Centos7安装jdk脚本">
+<meta itemprop="description" content="一键安装jdk">
 
 
+<meta itemprop="datePublished" content="2019-06-16T21:16:32&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-16T21:16:32&#43;08:00" />
+<meta itemprop="wordCount" content="632">
 
-<meta itemprop="keywords" content="redis,shell," />
+
+
+<meta itemprop="keywords" content="java,jdk,sh," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Redis Cluster Start"/>
-<meta name="twitter:description" content="最简单的redis集群cluster模式启动脚本"/>
+<meta name="twitter:title" content="Centos7安装jdk脚本"/>
+<meta name="twitter:description" content="一键安装jdk"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -308,14 +308,14 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">Redis Cluster Start</h1>
+      <h1 class="post-title">Centos7安装jdk脚本</h1>
       
       <div class="post-meta">
         <time datetime="2019-06-16" class="post-time">
           2019-06-16
         </time>
         <div class="post-category">
-            <a href="https://scallee.github.io/blog/categories/redis/"> redis </a>
+            <a href="https://scallee.github.io/blog/categories/java/"> Java </a>
             
           </div>
         
@@ -339,7 +339,9 @@
 
     
     <div class="post-content">
-      <p>Redis集群Cluster模式启动脚本</p>
+      <p>Centos7 安装JDK 版本jdk1.8.0_161</p>
+
+<p>什么都不说，直接上代码</p>
 
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -376,41 +378,89 @@
 </span><span class="lnt">31
 </span><span class="lnt">32
 </span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
-</span><span class="cp"></span><span class="nv">redis_path</span><span class="o">=</span><span class="s2">&#34;/usr/local/cluster/&#34;</span>
-<span class="nv">cluster_num</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep redis <span class="p">|</span>  wc -l<span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cluster_num</span><span class="si">}</span><span class="s2">&#34;</span> -le <span class="m">0</span> <span class="o">]</span>
-<span class="k">then</span>
-        <span class="nb">echo</span> -e <span class="s2">&#34;===== Success: Has killed all cluster progress.&#34;</span>
-<span class="k">else</span>
-		pkill -9 redis
+</span><span class="cp"></span>
+<span class="c1">## 软件的安装包的地址(请根据实际版本及文件安装包名称进行修改)</span>
+<span class="nv">JAVA_TAR</span><span class="o">=</span>/usr/local/java/jdk-8u161-linux-x64.tar.gz
+<span class="nv">JAVA_INSTALL_PATH</span><span class="o">=</span>/usr/local/java/
+
+checkjdk<span class="o">(){</span>
+<span class="k">if</span> <span class="o">[</span> ! -f <span class="s2">&#34;</span><span class="si">${</span><span class="nv">JAVA_TAR</span><span class="si">}</span><span class="s2">&#34;</span>  <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nb">echo</span> －－提示：Java安装文件或openfire安装文件不存在,请将它们拷贝过来再运行!
+	<span class="nb">exit</span> <span class="m">1</span><span class="p">;</span>
 <span class="k">fi</span>
 
-<span class="nb">cd</span> <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span>
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span><span class="m">700</span>*/appendonly.aof
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span><span class="m">700</span>*/dump.rdb
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span><span class="m">700</span>*/nodes*
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span>nodes*
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span>appendonly.aof
-<span class="nb">cd</span> /usr/local/cluster/7000/
-redis-server /usr/local/cluster/7000/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7001/
-redis-server /usr/local/cluster/7001/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7002/
-redis-server /usr/local/cluster/7002/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7003/
-redis-server /usr/local/cluster/7003/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7004/
-redis-server /usr/local/cluster/7004/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7005/
-redis-server /usr/local/cluster/7005/redis.conf
+<span class="nb">echo</span> －－提示：－－－－－－－正在安装配置java环境变量，请稍等！－－－－－－－
+sleep <span class="m">1</span>
+<span class="nb">echo</span> －－提示：－－－－－－－第一步：检查本机是否安装了java！－－－－－－－
 
-<span class="nb">cd</span> /usr/local/redis5.0/redis-5.0.0/src/
-<span class="nb">echo</span> yes <span class="p">|</span> ./redis-cli  --cluster  create   <span class="m">192</span>.168.110.128:7000 <span class="m">192</span>.168.110.128:7001 <span class="m">192</span>.168.110.128:7002 <span class="m">192</span>.168.110.128:7003 <span class="m">192</span>.168.110.128:7004 <span class="m">192</span>.168.110.128:7005 --cluster-replicas <span class="m">1</span> 
+<span class="nv">java_version</span><span class="o">=</span>java -version <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="p">|</span>grep java<span class="p">|</span>awk -F <span class="s1">&#39;&#34;&#39;</span> <span class="s1">&#39;{print $2}&#39;</span>
 
-<span class="c1">#试试echo yes &gt;</span> </code></pre></td></tr></table>
+<span class="nb">echo</span> --------------<span class="s2">&#34;</span><span class="nv">$java_version</span><span class="s2">&#34;</span>--------  
+<span class="k">if</span> <span class="o">[</span> ! -n <span class="nv">$?</span> <span class="o">]</span>
+<span class="k">then</span>
+    <span class="nb">echo</span> －－－－－－－本机已安装了java环境变量无须在安装，可以直接安装其他应用 －－－－－
+	java -version
+<span class="k">else</span>  
+    <span class="nb">echo</span> －－－－－－－本机未安装java,开始安装－－－－－－－
+	installjdk
+<span class="k">fi</span>
+<span class="o">}</span>
+installjdk<span class="o">(){</span>
+<span class="nb">echo</span> －－－－－－－创建java安装路径－－－－－－－
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&#34;</span><span class="nv">$JAVA_INSTALL_PATH</span><span class="s2">&#34;</span> <span class="o">]</span>
+<span class="k">then</span>
+	<span class="nb">echo</span> －－－－－－－已经存在java安装路径－－－－－－－
+<span class="k">else</span>  
+   mkdir <span class="nv">$JAVA_INSTALL_PATH</span>
+	<span class="nb">echo</span> －－－－－－－java安装路径创建完毕－－－－－－－ 
+<span class="k">fi</span>
+<span class="nb">echo</span> －－提示：－－－－－－－开始安装java！－－－－－－－
+tar -zxvf <span class="nv">$JAVA_TAR</span> -C <span class="nv">$JAVA_INSTALL_PATH</span>
+<span class="nb">echo</span> <span class="s2">&#34;解压成功&#34;</span>
+ 
+<span class="nb">echo</span> <span class="s2">&#34;开始修改/etc/profile中配置文件，增加新的内容&#34;</span>
+cat &gt;&gt; /etc/profile <span class="s">&lt;&lt; EOF
+</span><span class="s">JAVA_HOME=/usr/local/java/jdk1.8.0_161
+</span><span class="s">JRE_HOME=\$JAVA_HOME/
+</span><span class="s">PATH=\$PATH:\$JAVA_HOME/bin:\$JRE_HOME/bin
+</span><span class="s">CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar:\$JRE_HOME/lib
+</span><span class="s">export JAVA_HOME JRE_HOME PATH CLASSPATH
+</span><span class="s">EOF</span>
+<span class="nb">echo</span> <span class="s2">&#34;执行cat标准输出成功,开始更新/etc/profile文件。&#34;</span>
+<span class="nb">source</span> /etc/profile
+<span class="nb">echo</span> <span class="s2">&#34;jdk11 安装成功&#34;</span>
+<span class="nb">echo</span> <span class="s2">&#34;开始测试jdk是否安装看成。看下面输出&#34;</span>
+java -version
+<span class="o">}</span>
+
+checkjdk</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -424,15 +474,16 @@ redis-server /usr/local/cluster/7005/redis.conf
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://scallee.github.io/blog/tags/redis/">redis</a>
-          <a href="https://scallee.github.io/blog/tags/shell/">shell</a>
+          <a href="https://scallee.github.io/blog/tags/java/">java</a>
+          <a href="https://scallee.github.io/blog/tags/jdk/">jdk</a>
+          <a href="https://scallee.github.io/blog/tags/sh/">sh</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/blog/post/centos7-install-jdk-sh/">
+          <a class="prev" href="/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -442,12 +493,12 @@ redis-server /usr/local/cluster/7005/redis.conf
 </svg>
 
             </i>
-            <span class="prev-text nav-default">Centos7安装jdk脚本</span>
+            <span class="prev-text nav-default">SpringBoot使用读写分离数据源</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/blog/post/firewall/">
-            <span class="next-text nav-default">Firewall</span>
+          <a class="next" href="/blog/post/redis-cluster-start/">
+            <span class="next-text nav-default">Redis Cluster Start</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">

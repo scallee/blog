@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Redis Cluster Start - 轨迹的印痕</title>
+  <title>Java · 轨迹的印痕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,9 +22,9 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="轨迹的印痕" /><meta name="description" content="最简单的redis集群cluster模式启动脚本" />
-<meta name="keywords" content="redis, linux" />
-
+<meta name="author" content="轨迹的印痕" />
+  <meta name="description" content="这里是我写字的地方" />
+  <meta name="keywords" content="linux, java, redis, git, 博客, 笔记" />
 
 
 
@@ -34,7 +34,8 @@
 <meta name="generator" content="Hugo 0.55.5" />
 
 
-<link rel="canonical" href="https://scallee.github.io/blog/post/redis-cluster-start/" />
+<link rel="canonical" href="https://scallee.github.io/blog/categories/java/" />
+<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/blog/categories/java/index.xml%20https://scallee.github.io/blog/categories/java/index.xml%7d" rel="alternate" type="application/rss+xml" title="轨迹的印痕" />
 
 
 
@@ -58,27 +59,19 @@
 <link rel="stylesheet" href="/blog/css/custom.css">
 
 
-<meta property="og:title" content="Redis Cluster Start" />
-<meta property="og:description" content="最简单的redis集群cluster模式启动脚本" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://scallee.github.io/blog/post/redis-cluster-start/" />
-<meta property="article:published_time" content="2019-06-16T20:58:58&#43;08:00"/>
-<meta property="article:modified_time" content="2019-06-16T20:58:58&#43;08:00"/>
+<meta property="og:title" content="Java" />
+<meta property="og:description" content="这里是我写字的地方" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://scallee.github.io/blog/categories/java/" />
 
-<meta itemprop="name" content="Redis Cluster Start">
-<meta itemprop="description" content="最简单的redis集群cluster模式启动脚本">
+<meta property="og:updated_time" content="2019-06-16T21:44:38&#43;08:00"/>
 
+<meta itemprop="name" content="Java">
+<meta itemprop="description" content="这里是我写字的地方">
 
-<meta itemprop="datePublished" content="2019-06-16T20:58:58&#43;08:00" />
-<meta itemprop="dateModified" content="2019-06-16T20:58:58&#43;08:00" />
-<meta itemprop="wordCount" content="150">
-
-
-
-<meta itemprop="keywords" content="redis,shell," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Redis Cluster Start"/>
-<meta name="twitter:description" content="最简单的redis集群cluster模式启动脚本"/>
+<meta name="twitter:title" content="Java"/>
+<meta name="twitter:description" content="这里是我写字的地方"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -305,169 +298,66 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          <article class="post bg-white">
-    
-    <header class="post-header">
-      <h1 class="post-title">Redis Cluster Start</h1>
-      
-      <div class="post-meta">
-        <time datetime="2019-06-16" class="post-time">
-          2019-06-16
-        </time>
-        <div class="post-category">
-            <a href="https://scallee.github.io/blog/categories/redis/"> redis </a>
-            
-          </div>
-        
-
-        
-        
-
-        
-        
-      </div>
-    </header>
-
-    
-    
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">文章目录</h2>
-  <div class="post-toc-content">
-    
-  </div>
-</div>
-
-    
-    <div class="post-content">
-      <p>Redis集群Cluster模式启动脚本</p>
-
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
-</span><span class="cp"></span><span class="nv">redis_path</span><span class="o">=</span><span class="s2">&#34;/usr/local/cluster/&#34;</span>
-<span class="nv">cluster_num</span><span class="o">=</span><span class="sb">`</span>ps aux <span class="p">|</span> grep redis <span class="p">|</span>  wc -l<span class="sb">`</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cluster_num</span><span class="si">}</span><span class="s2">&#34;</span> -le <span class="m">0</span> <span class="o">]</span>
-<span class="k">then</span>
-        <span class="nb">echo</span> -e <span class="s2">&#34;===== Success: Has killed all cluster progress.&#34;</span>
-<span class="k">else</span>
-		pkill -9 redis
-<span class="k">fi</span>
-
-<span class="nb">cd</span> <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span>
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span><span class="m">700</span>*/appendonly.aof
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span><span class="m">700</span>*/dump.rdb
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span><span class="m">700</span>*/nodes*
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span>nodes*
-rm -rf <span class="si">${</span><span class="nv">redis_path</span><span class="si">}</span>appendonly.aof
-<span class="nb">cd</span> /usr/local/cluster/7000/
-redis-server /usr/local/cluster/7000/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7001/
-redis-server /usr/local/cluster/7001/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7002/
-redis-server /usr/local/cluster/7002/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7003/
-redis-server /usr/local/cluster/7003/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7004/
-redis-server /usr/local/cluster/7004/redis.conf
-<span class="nb">cd</span> /usr/local/cluster/7005/
-redis-server /usr/local/cluster/7005/redis.conf
-
-<span class="nb">cd</span> /usr/local/redis5.0/redis-5.0.0/src/
-<span class="nb">echo</span> yes <span class="p">|</span> ./redis-cli  --cluster  create   <span class="m">192</span>.168.110.128:7000 <span class="m">192</span>.168.110.128:7001 <span class="m">192</span>.168.110.128:7002 <span class="m">192</span>.168.110.128:7003 <span class="m">192</span>.168.110.128:7004 <span class="m">192</span>.168.110.128:7005 --cluster-replicas <span class="m">1</span> 
-
-<span class="c1">#试试echo yes &gt;</span> </code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-
-    
-    
-
-
-    
-    
-
-    <footer class="post-footer">
-      <div class="post-tags">
-          <a href="https://scallee.github.io/blog/tags/redis/">redis</a>
-          <a href="https://scallee.github.io/blog/tags/shell/">shell</a>
           
-        </div>
 
-      
-      <nav class="post-nav">
-        
-          <a class="prev" href="/blog/post/centos7-install-jdk-sh/">
-            
-            <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
+<section id="archive" class="archive">
+  
+    
+      <div class="archive-title category">
+        <h2 class="archive-name">分类： Java</h2>
+      </div>
+    
+  
 
-            </i>
-            <span class="prev-text nav-default">Centos7安装jdk脚本</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        
-          <a class="next" href="/blog/post/firewall/">
-            <span class="next-text nav-default">Firewall</span>
-            <span class="prev-text nav-mobile">下一篇</span>
-            
-            <i class="iconfont">
-              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
-</svg>
+  
+    <div class="archive-post">
+      <time datetime="2019-06-16" class="archive-post-time">
+        2019-06-16
+      </time>
+      <span class="archive-post-title">
+        <a href="/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/" class="archive-post-link">
+          SpringBoot使用读写分离数据源
+        </a>
+      </span>
+    </div>
+  
+    <div class="archive-post">
+      <time datetime="2019-06-16" class="archive-post-time">
+        2019-06-16
+      </time>
+      <span class="archive-post-title">
+        <a href="/blog/post/centos7-install-jdk-sh/" class="archive-post-link">
+          Centos7安装jdk脚本
+        </a>
+      </span>
+    </div>
+  
+</section>
 
-            </i>
-          </a>
-      </nav>
-    </footer>
-  </article>
+
+
+
+
+
+  
+  
+  
 
   
   
 
   
   
+
+  
+  
+
+  
+  
+
+
+
+
 
         </div>
       </div>
