@@ -27,6 +27,8 @@ mathjax: false
 ```
 {{< figure src="/image/hugo-site.png" >}}
 
+![img](/image/hugo-site.png)
+
 ```sh
 [root@localhost hugo] cd /usr/local/myblog/themes
 [root@localhost themes] git clone https://github.com/spf13/hyde.git
