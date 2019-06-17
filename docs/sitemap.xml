@@ -3,7 +3,56 @@
   
   <url>
     <loc>https://scallee.github.io/blog/categories/</loc>
-    <lastmod>2019-06-16T21:44:38+08:00</lastmod>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/post/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/post/redis-cluster-conf/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/tags/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/tags/cluster/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/tags/linux/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/categories/redis/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/tags/redis/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog/</loc>
+    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,22 +63,10 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/</loc>
-    <lastmod>2019-06-16T21:44:38+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://scallee.github.io/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog/tags/</loc>
-    <lastmod>2019-06-16T21:44:38+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -46,12 +83,6 @@
   
   <url>
     <loc>https://scallee.github.io/blog/tags/springboot/</loc>
-    <lastmod>2019-06-16T21:44:38+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -83,18 +114,6 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/categories/redis/</loc>
-    <lastmod>2019-06-16T20:58:58+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog/tags/redis/</loc>
-    <lastmod>2019-06-16T20:58:58+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://scallee.github.io/blog/tags/shell/</loc>
     <lastmod>2019-06-16T20:58:58+08:00</lastmod>
     <priority>0</priority>
@@ -115,12 +134,6 @@
   
   <url>
     <loc>https://scallee.github.io/blog/categories/linux/</loc>
-    <lastmod>2019-06-16T20:42:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog/tags/linux/</loc>
     <lastmod>2019-06-16T20:42:05+08:00</lastmod>
     <priority>0</priority>
   </url>
