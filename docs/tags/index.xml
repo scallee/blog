@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 轨迹的印痕</title>
-    <link>https://scallee.github.io/blog/tags/</link>
+    <link>https://scallee.github.io/blog//tags/</link>
     <description>Recent content in Tags on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Jun 2019 10:03:42 +0800</lastBuildDate>
     
-	<atom:link href="https://scallee.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://scallee.github.io/blog//tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>cluster</title>
-      <link>https://scallee.github.io/blog/tags/cluster/</link>
+      <link>https://scallee.github.io/blog//tags/cluster/</link>
       <pubDate>Mon, 17 Jun 2019 10:03:42 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/cluster/</guid>
+      <guid>https://scallee.github.io/blog//tags/cluster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://scallee.github.io/blog/tags/linux/</link>
+      <link>https://scallee.github.io/blog//tags/linux/</link>
       <pubDate>Mon, 17 Jun 2019 10:03:42 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/linux/</guid>
+      <guid>https://scallee.github.io/blog//tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>redis</title>
-      <link>https://scallee.github.io/blog/tags/redis/</link>
+      <link>https://scallee.github.io/blog//tags/redis/</link>
       <pubDate>Mon, 17 Jun 2019 10:03:42 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/redis/</guid>
+      <guid>https://scallee.github.io/blog//tags/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://scallee.github.io/blog/tags/java/</link>
+      <link>https://scallee.github.io/blog//tags/java/</link>
       <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/java/</guid>
+      <guid>https://scallee.github.io/blog//tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>springboot</title>
-      <link>https://scallee.github.io/blog/tags/springboot/</link>
+      <link>https://scallee.github.io/blog//tags/springboot/</link>
       <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/springboot/</guid>
+      <guid>https://scallee.github.io/blog//tags/springboot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jdk</title>
-      <link>https://scallee.github.io/blog/tags/jdk/</link>
+      <link>https://scallee.github.io/blog//tags/jdk/</link>
       <pubDate>Sun, 16 Jun 2019 21:16:32 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/jdk/</guid>
+      <guid>https://scallee.github.io/blog//tags/jdk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sh</title>
-      <link>https://scallee.github.io/blog/tags/sh/</link>
+      <link>https://scallee.github.io/blog//tags/sh/</link>
       <pubDate>Sun, 16 Jun 2019 21:16:32 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/sh/</guid>
+      <guid>https://scallee.github.io/blog//tags/sh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shell</title>
-      <link>https://scallee.github.io/blog/tags/shell/</link>
+      <link>https://scallee.github.io/blog//tags/shell/</link>
       <pubDate>Sun, 16 Jun 2019 20:58:58 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/shell/</guid>
+      <guid>https://scallee.github.io/blog//tags/shell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firewall</title>
-      <link>https://scallee.github.io/blog/tags/firewall/</link>
+      <link>https://scallee.github.io/blog//tags/firewall/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/firewall/</guid>
+      <guid>https://scallee.github.io/blog//tags/firewall/</guid>
       <description></description>
     </item>
     
     <item>
       <title>命令</title>
-      <link>https://scallee.github.io/blog/tags/%E5%91%BD%E4%BB%A4/</link>
+      <link>https://scallee.github.io/blog//tags/%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sun, 16 Jun 2019 19:42:41 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://scallee.github.io/blog//tags/%E5%91%BD%E4%BB%A4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://scallee.github.io/blog/tags/hugo/</link>
+      <link>https://scallee.github.io/blog//tags/hugo/</link>
       <pubDate>Sun, 16 Jun 2019 19:22:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/tags/hugo/</guid>
+      <guid>https://scallee.github.io/blog//tags/hugo/</guid>
       <description></description>
     </item>
     

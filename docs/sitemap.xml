@@ -2,170 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://scallee.github.io/blog/categories/</loc>
+    <loc>https://scallee.github.io/blog//categories/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/</loc>
+    <loc>https://scallee.github.io/blog//post/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/redis-cluster-conf/</loc>
+    <loc>https://scallee.github.io/blog//post/redis-cluster-conf/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/</loc>
+    <loc>https://scallee.github.io/blog//tags/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/cluster/</loc>
+    <loc>https://scallee.github.io/blog//tags/cluster/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/linux/</loc>
+    <loc>https://scallee.github.io/blog//tags/linux/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/categories/redis/</loc>
+    <loc>https://scallee.github.io/blog//categories/redis/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/redis/</loc>
+    <loc>https://scallee.github.io/blog//tags/redis/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/</loc>
+    <loc>https://scallee.github.io/blog//</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/categories/java/</loc>
+    <loc>https://scallee.github.io/blog//categories/java/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
+    <loc>https://scallee.github.io/blog//post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/java/</loc>
+    <loc>https://scallee.github.io/blog//tags/java/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/categories/springboot/</loc>
+    <loc>https://scallee.github.io/blog//categories/springboot/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/springboot/</loc>
+    <loc>https://scallee.github.io/blog//tags/springboot/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/centos7-install-jdk-sh/</loc>
+    <loc>https://scallee.github.io/blog//post/centos7-install-jdk-sh/</loc>
     <lastmod>2019-06-16T21:16:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/jdk/</loc>
+    <loc>https://scallee.github.io/blog//tags/jdk/</loc>
     <lastmod>2019-06-16T21:16:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/sh/</loc>
+    <loc>https://scallee.github.io/blog//tags/sh/</loc>
     <lastmod>2019-06-16T21:16:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/redis-cluster-start/</loc>
+    <loc>https://scallee.github.io/blog//post/redis-cluster-start/</loc>
     <lastmod>2019-06-16T20:58:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/shell/</loc>
+    <loc>https://scallee.github.io/blog//tags/shell/</loc>
     <lastmod>2019-06-16T20:58:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/firewall/</loc>
+    <loc>https://scallee.github.io/blog//tags/firewall/</loc>
     <lastmod>2019-06-16T20:42:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/firewall/</loc>
+    <loc>https://scallee.github.io/blog//post/firewall/</loc>
     <lastmod>2019-06-16T20:42:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/categories/linux/</loc>
+    <loc>https://scallee.github.io/blog//categories/linux/</loc>
     <lastmod>2019-06-16T20:42:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-06-16T19:42:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://scallee.github.io/blog//tags/%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-06-16T19:42:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/post/centos7-install-hogo/</loc>
+    <loc>https://scallee.github.io/blog//post/centos7-install-hogo/</loc>
     <lastmod>2019-06-16T19:22:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/tags/hugo/</loc>
+    <loc>https://scallee.github.io/blog//tags/hugo/</loc>
     <lastmod>2019-06-16T19:22:05+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog/about/</loc>
+    <loc>https://scallee.github.io/blog//about/</loc>
     <lastmod>2019-06-16T18:03:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

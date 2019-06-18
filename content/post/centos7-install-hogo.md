@@ -1,4 +1,4 @@
----
+﻿---
 title:  "Centos7 安装Hugo"
 date: 2019-06-16T19:22:05+08:00
 lastmod: 2019-06-16T19:22:05+08:00
@@ -25,9 +25,9 @@ mathjax: false
 [root@localhost hugo] cp ./hugo /usr/local/bin/
 [root@localhost hugo] hugo new site /usr/local/myblog
 ```
-{{< figure src="/image/hugo-site.png" >}}
+{{< figure src="/blog/image/hugo-site.png" >}}
 
-![img](/image/hugo-site.png)
+![img](/blog/image/hugo-site.png)
 
 ```sh
 [root@localhost hugo] cd /usr/local/myblog/themes

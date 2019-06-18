@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>轨迹的印痕</title>
-    <link>https://scallee.github.io/blog/</link>
+    <link>https://scallee.github.io/blog//</link>
     <description>Recent content on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Jun 2019 10:03:42 +0800</lastBuildDate>
     
-        <atom:link href="https://scallee.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://scallee.github.io/blog//index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Redis Cluster Conf</title>
-      <link>https://scallee.github.io/blog/post/redis-cluster-conf/</link>
+      <link>https://scallee.github.io/blog//post/redis-cluster-conf/</link>
       <pubDate>Mon, 17 Jun 2019 10:03:42 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/redis-cluster-conf/</guid>
+      <guid>https://scallee.github.io/blog//post/redis-cluster-conf/</guid>
       
         <description>&lt;p&gt;redis集群简单设置脚本&lt;/p&gt;
 
@@ -105,10 +105,10 @@ sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/dbfilename dump-7000.rdb/dbfile
     
     <item>
       <title>SpringBoot使用读写分离数据源</title>
-      <link>https://scallee.github.io/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</link>
+      <link>https://scallee.github.io/blog//post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</link>
       <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</guid>
+      <guid>https://scallee.github.io/blog//post/springboot%E4%BD%BF%E7%94%A8%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB%E6%95%B0%E6%8D%AE%E6%BA%90/</guid>
       
         <description>&lt;h2 id=&#34;springboot使用读写分离数据源&#34;&gt;SpringBoot使用读写分离数据源&lt;/h2&gt;
 
@@ -851,10 +851,10 @@ slave_2:
     
     <item>
       <title>Centos7安装jdk脚本</title>
-      <link>https://scallee.github.io/blog/post/centos7-install-jdk-sh/</link>
+      <link>https://scallee.github.io/blog//post/centos7-install-jdk-sh/</link>
       <pubDate>Sun, 16 Jun 2019 21:16:32 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/centos7-install-jdk-sh/</guid>
+      <guid>https://scallee.github.io/blog//post/centos7-install-jdk-sh/</guid>
       
         <description>&lt;p&gt;Centos7 安装JDK 版本jdk1.8.0_161&lt;/p&gt;
 
@@ -985,10 +985,10 @@ checkjdk&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
     
     <item>
       <title>Redis Cluster Start</title>
-      <link>https://scallee.github.io/blog/post/redis-cluster-start/</link>
+      <link>https://scallee.github.io/blog//post/redis-cluster-start/</link>
       <pubDate>Sun, 16 Jun 2019 20:58:58 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/redis-cluster-start/</guid>
+      <guid>https://scallee.github.io/blog//post/redis-cluster-start/</guid>
       
         <description>&lt;p&gt;Redis集群Cluster模式启动脚本&lt;/p&gt;
 
@@ -1069,10 +1069,10 @@ redis-server /usr/local/cluster/7005/redis.conf
     
     <item>
       <title>Firewall</title>
-      <link>https://scallee.github.io/blog/post/firewall/</link>
+      <link>https://scallee.github.io/blog//post/firewall/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/firewall/</guid>
+      <guid>https://scallee.github.io/blog//post/firewall/</guid>
       
         <description>&lt;h4 id=&#34;1-firewalld的基本使用&#34;&gt;1、firewalld的基本使用&lt;/h4&gt;
 
@@ -1156,10 +1156,10 @@ redis-server /usr/local/cluster/7005/redis.conf
     
     <item>
       <title>Linux命令</title>
-      <link>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</link>
+      <link>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sun, 16 Jun 2019 19:42:41 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</guid>
       
         <description>&lt;h3 id=&#34;linux-命令&#34;&gt;Linux 命令&lt;/h3&gt;
 
@@ -1323,10 +1323,10 @@ redis-server /usr/local/cluster/7005/redis.conf
     
     <item>
       <title>Centos7 安装Hugo</title>
-      <link>https://scallee.github.io/blog/post/centos7-install-hogo/</link>
+      <link>https://scallee.github.io/blog//post/centos7-install-hogo/</link>
       <pubDate>Sun, 16 Jun 2019 19:22:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/centos7-install-hogo/</guid>
+      <guid>https://scallee.github.io/blog//post/centos7-install-hogo/</guid>
       
         <description>&lt;h3 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h3&gt;
 
@@ -1354,14 +1354,14 @@ redis-server /usr/local/cluster/7005/redis.conf
 &lt;figure  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
     &lt;div class=&#34;img&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/image/hugo-site.png&#34; /&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog//blog/image/hugo-site.png&#34; /&gt;
     &lt;/div&gt;
-    &lt;a href=&#34;https://scallee.github.io/blog/image/hugo-site.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog//blog/image/hugo-site.png&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
   &lt;/figure&gt;
 &lt;/div&gt;
 
 
-&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog/image/hugo-site.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/hugo-site.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
@@ -1528,10 +1528,10 @@ git push origin master  ：Git会把master分支推送到远程库对应的远�
     
     <item>
       <title>关于我</title>
-      <link>https://scallee.github.io/blog/about/</link>
+      <link>https://scallee.github.io/blog//about/</link>
       <pubDate>Sun, 16 Jun 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/about/</guid>
+      <guid>https://scallee.github.io/blog//about/</guid>
       
         <description>
 
@@ -1539,9 +1539,9 @@ git push origin master  ：Git会把master分支推送到远程库对应的远�
 &lt;figure  itemprop=&#34;associatedMedia&#34;
   itemscope itemtype=&#34;http://schema.org/ImageObject&#34; &gt;
     &lt;div class=&#34;img&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog/jingli.jpg&#34; /&gt;
+      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://scallee.github.io/blog//jingli.jpg&#34; /&gt;
     &lt;/div&gt;
-    &lt;a href=&#34;https://scallee.github.io/blog/jingli.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://scallee.github.io/blog//jingli.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
   &lt;/figure&gt;
 &lt;/div&gt;
 

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on 轨迹的印痕</title>
-    <link>https://scallee.github.io/blog/categories/linux/</link>
+    <link>https://scallee.github.io/blog//categories/linux/</link>
     <description>Recent content in linux on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 16 Jun 2019 20:42:05 +0800</lastBuildDate>
     
-	<atom:link href="https://scallee.github.io/blog/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://scallee.github.io/blog//categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Firewall</title>
-      <link>https://scallee.github.io/blog/post/firewall/</link>
+      <link>https://scallee.github.io/blog//post/firewall/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/firewall/</guid>
+      <guid>https://scallee.github.io/blog//post/firewall/</guid>
       <description>&lt;h4 id=&#34;1-firewalld的基本使用&#34;&gt;1、firewalld的基本使用&lt;/h4&gt;
 
 &lt;ul&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Linux命令</title>
-      <link>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</link>
+      <link>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sun, 16 Jun 2019 19:42:41 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/linux%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</guid>
       <description>&lt;h3 id=&#34;linux-命令&#34;&gt;Linux 命令&lt;/h3&gt;
 
 &lt;h4 id=&#34;ls-和-ll-的使用方法&#34;&gt;&lt;code&gt;ls&lt;/code&gt; 和 &lt;code&gt;ll&lt;/code&gt;的使用方法：&lt;/h4&gt;
@@ -44,10 +44,10 @@
     
     <item>
       <title>Centos7 安装Hugo</title>
-      <link>https://scallee.github.io/blog/post/centos7-install-hogo/</link>
+      <link>https://scallee.github.io/blog//post/centos7-install-hogo/</link>
       <pubDate>Sun, 16 Jun 2019 19:22:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/post/centos7-install-hogo/</guid>
+      <guid>https://scallee.github.io/blog//post/centos7-install-hogo/</guid>
       <description>&lt;h3 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h3&gt;</description>
     </item>
     

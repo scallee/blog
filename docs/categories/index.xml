@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 轨迹的印痕</title>
-    <link>https://scallee.github.io/blog/categories/</link>
+    <link>https://scallee.github.io/blog//categories/</link>
     <description>Recent content in Categories on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 17 Jun 2019 10:03:42 +0800</lastBuildDate>
     
-	<atom:link href="https://scallee.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://scallee.github.io/blog//categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>redis</title>
-      <link>https://scallee.github.io/blog/categories/redis/</link>
+      <link>https://scallee.github.io/blog//categories/redis/</link>
       <pubDate>Mon, 17 Jun 2019 10:03:42 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/categories/redis/</guid>
+      <guid>https://scallee.github.io/blog//categories/redis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://scallee.github.io/blog/categories/java/</link>
+      <link>https://scallee.github.io/blog//categories/java/</link>
       <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/categories/java/</guid>
+      <guid>https://scallee.github.io/blog//categories/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>springboot</title>
-      <link>https://scallee.github.io/blog/categories/springboot/</link>
+      <link>https://scallee.github.io/blog//categories/springboot/</link>
       <pubDate>Sun, 16 Jun 2019 21:44:38 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/categories/springboot/</guid>
+      <guid>https://scallee.github.io/blog//categories/springboot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://scallee.github.io/blog/categories/linux/</link>
+      <link>https://scallee.github.io/blog//categories/linux/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog/categories/linux/</guid>
+      <guid>https://scallee.github.io/blog//categories/linux/</guid>
       <description></description>
     </item>
     
