@@ -25,8 +25,6 @@ mathjax: false
 [root@localhost hugo] cp ./hugo /usr/local/bin/
 [root@localhost hugo] hugo new site /usr/local/myblog
 ```
-{{< figure src="/blog/image/hugo-site.png" >}}
-
 ![img](/blog/image/hugo-site.png)
 
 ```sh
