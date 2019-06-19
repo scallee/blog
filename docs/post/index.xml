@@ -98,5 +98,24 @@
       <description>&lt;h3 id=&#34;安装hugo&#34;&gt;安装Hugo&lt;/h3&gt;</description>
     </item>
     
+    <item>
+      <title>windows10 Install Mysql</title>
+      <link>https://scallee.github.io/blog//post/centos7-install-mysql/</link>
+      <pubDate>Sun, 19 May 2019 08:34:36 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/centos7-install-mysql/</guid>
+      <description>&lt;h2 id=&#34;mysql-历史版本&#34;&gt;MySQL 历史版本&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;5.0-8.0 
+https://downloads.mysql.com/archives/community/&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
   </channel>
 </rss>
