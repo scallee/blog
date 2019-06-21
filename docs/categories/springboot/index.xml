@@ -27,5 +27,14 @@
 &lt;/blockquote&gt;</description>
     </item>
     
+    <item>
+      <title>springboot入门</title>
+      <link>https://scallee.github.io/blog//post/spring-boot%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Sun, 12 May 2019 20:42:41 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/spring-boot%E5%85%A5%E9%97%A8/</guid>
+      <description>一、Spring Boot 入门 1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决</description>
+    </item>
+    
   </channel>
 </rss>
