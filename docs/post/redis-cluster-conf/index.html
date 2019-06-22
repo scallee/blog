@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.55.5" />
 
 
 <link rel="canonical" href="https://scallee.github.io/blog//post/redis-cluster-conf/" />
@@ -71,7 +71,7 @@
 
 <meta itemprop="datePublished" content="2019-06-17T10:03:42&#43;08:00" />
 <meta itemprop="dateModified" content="2019-06-17T10:03:42&#43;08:00" />
-<meta itemprop="wordCount" content="189">
+<meta itemprop="wordCount" content="295">
 
 
 
@@ -341,8 +341,6 @@
     <div class="post-content">
       <p>redis集群简单设置脚本</p>
 
-<p>未完成</p>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt"> 1
@@ -385,7 +383,7 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
-
+<span class="c1"># redis-cluster配置</span>
 <span class="nv">CULSTER_CONF</span><span class="o">=</span>/usr/local/cluster/redis.conf
 
 <span class="nv">CLUSTER_BASE_PATH</span><span class="o">=</span>/usr/local/cluster/700
@@ -394,31 +392,31 @@
 <span class="k">do</span>
 mkdir -p <span class="nv">$CLUSTER_BASE_PATH$i</span><span class="p">;</span>
 <span class="k">done</span>
-
-
+<span class="nb">echo</span> 复制redis.conf 到目标目录
 cp /usr/local/redis-5.0.0/redis.conf /usr/local/cluster/
-
-sleep <span class="m">1</span> 
-<span class="nb">echo</span> 复制redis.conf
+<span class="nb">echo</span> redis.conf 复制完成
+<span class="nb">echo</span> 修改redis.conf参数
 sed -i <span class="s1">&#39;s/port 6379/port 7000/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
 sed -i <span class="s1">&#39;s/# cluster-enabled yes/cluster-enabled yes/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
 sed -i <span class="s1">&#39;s/# cluster-config-file nodes-6379.conf/cluster-config-file nodes-7000.conf/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
-sed -i <span class="s1">&#39;s/# cluster-iode-timeout 15000/cluster-iode-timeout 15000/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
+sed -i <span class="s1">&#39;s/# cluster-node-timeout 15000/cluster-node-timeout 15000/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
 sed -i <span class="s1">&#39;s/appendonly no/appendonly yes/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
 sed -i <span class="s1">&#39;s/dbfilename dump.rdb/dbfilename dump-7000.rdb/g&#39;</span> <span class="nv">$CULSTER_CONF</span>
-sleep <span class="m">1</span> 
-<span class="nb">echo</span> 修改redis.conf
+
+<span class="nb">echo</span> 完成修改redis.conf
 
 <span class="c1"># Linux批量复制文件到文件夹</span>
-
+<span class="nb">echo</span> 将修改后的redis.conf循环复制到cluster下的目录里
 <span class="nb">echo</span> <span class="si">${</span><span class="nv">CLUSTER_BASE_PATH</span><span class="si">}</span>* <span class="p">|</span> xargs -n <span class="m">1</span> cp -v <span class="nv">$CULSTER_CONF</span>
 
+<span class="nb">echo</span> 针对每个cluster修改相应的redis.conf参数
 <span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="m">5</span><span class="k">)</span>
 <span class="k">do</span>
-sed -i <span class="s1">&#39;s/port 7000/port 7001/g&#39;</span> <span class="nv">$CLUSTER_BASE_PATH$i</span>/redis.conf
-sed -i <span class="s1">&#39;s/cluster-config-file nodes-7000.conf/cluster-config-file nodes-7001.conf/g&#39;</span> <span class="nv">$CLUSTER_BASE_PATH$i</span>/redis.conf
-sed -i <span class="s1">&#39;s/dbfilename dump-7000.rdb/dbfilename dump-7001.rdb/g&#39;</span>  <span class="nv">$CLUSTER_BASE_PATH$i</span>/redis.conf
-<span class="k">done</span></code></pre></td></tr></table>
+sed -i  <span class="s2">&#34;s/port 7000/port 700</span><span class="nv">$i</span><span class="s2">/g&#34;</span>  <span class="nv">$CLUSTER_BASE_PATH$i</span>/redis.conf
+sed -i  <span class="s2">&#34;s/cluster-config-file nodes-7000.conf/cluster-config-file nodes-700</span><span class="nv">$i</span><span class="s2">.conf/g&#34;</span>  <span class="nv">$CLUSTER_BASE_PATH$i</span>/redis.conf
+sed -i  <span class="s2">&#34;s/dbfilename dump-7000.rdb/dbfilename dump-700</span><span class="nv">$i</span><span class="s2">.rdb/g&#34;</span>   <span class="nv">$CLUSTER_BASE_PATH$i</span>/redis.conf
+<span class="k">done</span>
+<span class="nb">echo</span> 参数修改完成</code></pre></td></tr></table>
 </div>
 </div>
     </div>
