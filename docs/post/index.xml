@@ -124,5 +124,14 @@ https://downloads.mysql.com/archives/community/&lt;/code&gt;&lt;/pre&gt;&lt;/td&
       <description>一、Spring Boot 入门 1、Spring Boot 简介 简化Spring应用开发的一个框架； 整个Spring技术栈的一个大整合； J2EE开发的一站式解决</description>
     </item>
     
+    <item>
+      <title>Navicat 快捷键</title>
+      <link>https://scallee.github.io/blog//post/navicat-%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sun, 21 Apr 2019 10:19:42 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/navicat-%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>Navicat 快捷键 Navicat 主窗口 键 动作 CTRL+G 打开设置位置的文件夹 CTRL+#（# 代 表 0 至 9） 打开收藏夹链接 F6 命令列界面 CTRL+H 历史日志 CTRL+Q 新建查询 F12 仅显示活跃对象 CTRL+N 新建</description>
+    </item>
+    
   </channel>
 </rss>
