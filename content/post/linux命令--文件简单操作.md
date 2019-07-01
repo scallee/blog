@@ -27,7 +27,7 @@ cat catcreatefile.txt
 ```
 <!--more-->
 
-![catcreatefile](/blog/imagescatcreatefile.png)
+![catcreatefile](/blog/image/catcreatefile.png)
 
 ### 写入
 
@@ -48,9 +48,9 @@ usr other
 # >> 追加内容，原内容不变； > 覆盖原内容
 ```
 
-![echowritefile](/blog/imagesechowritefile.png)
+![echowritefile](/blog/image/echowritefile.png)
 
-![catwritefile](/blog/imagescatwritefile.png)
+![catwritefile](/blog/image/catwritefile.png)
 
 
 
@@ -69,7 +69,7 @@ head -n 3 file
 #打印前3行的内容
 ```
 
-![查找内容](/blog/imagessearch.png)
+![查找内容](/blog/image/search.png)
 
 
 
