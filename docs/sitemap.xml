@@ -3,13 +3,44 @@
   
   <url>
     <loc>https://scallee.github.io/blog//categories/</loc>
-    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://scallee.github.io/blog//tags/linux/</loc>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://scallee.github.io/blog//post/</loc>
-    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog//tags/</loc>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog//categories/linux/</loc>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://scallee.github.io/blog//</loc>
+    <lastmod>2019-07-01T20:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -21,25 +52,7 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//tags/</loc>
-    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://scallee.github.io/blog//tags/cluster/</loc>
-    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/linux/</loc>
-    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/redis/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -51,7 +64,7 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//</loc>
+    <loc>https://scallee.github.io/blog//tags/redis/</loc>
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -76,13 +89,13 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//tags/springboot/</loc>
+    <loc>https://scallee.github.io/blog//categories/springboot/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//categories/springboot/</loc>
+    <loc>https://scallee.github.io/blog//tags/springboot/</loc>
     <lastmod>2019-06-16T21:44:38+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -133,12 +146,6 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//categories/linux/</loc>
-    <lastmod>2019-06-16T20:42:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-06-16T19:42:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -172,13 +179,13 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//tags/mysql/</loc>
+    <loc>https://scallee.github.io/blog//categories/mysql/</loc>
     <lastmod>2019-05-19T08:34:36+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//categories/mysql/</loc>
+    <loc>https://scallee.github.io/blog//tags/mysql/</loc>
     <lastmod>2019-05-19T08:34:36+08:00</lastmod>
     <priority>0</priority>
   </url>

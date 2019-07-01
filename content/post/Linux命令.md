@@ -1,5 +1,5 @@
 ---
-title: "Linux命令"
+title: "Linux命令--ls和ll"
 date: 2019-06-16T19:42:41+08:00
 lastmod: 2019-06-16T19:42:41+08:00
 draft: false

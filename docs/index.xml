@@ -6,10 +6,132 @@
     <description>Recent content on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 17 Jun 2019 10:03:42 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 20:48:03 +0800</lastBuildDate>
     
         <atom:link href="https://scallee.github.io/blog//index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux命令  文件简单操作</title>
+      <link>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jul 2019 20:48:03 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4-%E6%96%87%E4%BB%B6%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/</guid>
+      
+        <description>&lt;h3 id=&#34;创建文件&#34;&gt;创建文件&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;touch file
+&lt;span class=&#34;c1&#34;&gt;#修改文件的时间属性，如果文件不存在则创建文件（只能创建空文件）&lt;/span&gt;
+cat&amp;gt;&amp;gt;catcreatefile.txt
+&lt;span class=&#34;c1&#34;&gt;#cat创建catcreatefile.txt文件，并接受键盘输入作为文件的内容。Ctrl+d退出并保存文件。&lt;/span&gt;
+cat catcreatefile.txt
+&lt;span class=&#34;c1&#34;&gt;#查看catcreatefile.txt的内容&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/imagescatcreatefile.png&#34; alt=&#34;catcreatefile&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;写入&#34;&gt;写入&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;new word&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; catcreatefile.txt
+&lt;span class=&#34;c1&#34;&gt;#向catcreatefile.txt文件中追加写入内容“new word”，原内容不变&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;update content&amp;#34;&lt;/span&gt;&amp;gt;catcreatefile.txt
+&lt;span class=&#34;c1&#34;&gt;#覆盖catcreatefile.txt的内容&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#使用echo命令写入内容，如果catcreatefile.txt文件不存在则创建&lt;/span&gt;
+cat &amp;gt;&amp;gt; newfile.txt &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; eof
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;gt; new word
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;gt; eof&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#使用cat命令 eof要顶格，成对使用，或者使用其他字符代替&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#或者结合Ctrl+d命令&lt;/span&gt;
+cat&amp;gt;&amp;gt; newfile.txt
+usr other
+&lt;span class=&#34;c1&#34;&gt;#使用Ctrl+d结束输入&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# &amp;gt;&amp;gt; 追加内容，原内容不变； &amp;gt; 覆盖原内容&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/imagesechowritefile.png&#34; alt=&#34;echowritefile&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/imagescatwritefile.png&#34; alt=&#34;catwritefile&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;查询&#34;&gt;查询&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;grep -ano &lt;span class=&#34;s1&#34;&gt;&amp;#39;关键字&amp;#39;&lt;/span&gt; file
+&lt;span class=&#34;c1&#34;&gt;#查找关键字所在的行号&lt;/span&gt;
+sed -n 2p file
+&lt;span class=&#34;c1&#34;&gt;#打印文件的第2行&lt;/span&gt;
+sed -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;,3p file 
+&lt;span class=&#34;c1&#34;&gt;#打印文件的第1行到第3行&lt;/span&gt;
+tail -n &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; file 
+&lt;span class=&#34;c1&#34;&gt;#打印文件最后3行的数据&lt;/span&gt;
+head -n &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; file
+&lt;span class=&#34;c1&#34;&gt;#打印前3行的内容&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/imagessearch.png&#34; alt=&#34;查找内容&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;linux中变量-等的含义&#34;&gt;Linux中变量$$,$?等的含义&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;$# 是传给脚本的参数个数
+$0 是脚本本身的名字
+$1 是传递给该shell脚本的第一个参数
+$2 是传递给该shell脚本的第二个参数
+$@ 是传给脚本的所有参数的列表
+$* 是以一个单字符串显示所有向脚本传递的参数，与位置变量不同，参数可超过9个
+$$ 是脚本运行的当前进程ID号
+$? 是显示最后命令的退出状态，0表示没有错误，其他表示有错误&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+      
+    </item>
     
     <item>
       <title>Redis Cluster Conf</title>
@@ -1153,7 +1275,7 @@ redis-server /usr/local/cluster/7005/redis.conf
     </item>
     
     <item>
-      <title>Linux命令</title>
+      <title>Linux命令--ls和ll</title>
       <link>https://scallee.github.io/blog//post/linux%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sun, 16 Jun 2019 19:42:41 +0800</pubDate>
       
