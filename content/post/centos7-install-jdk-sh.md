@@ -1,11 +1,11 @@
----
+﻿---
 title: "Centos7安装jdk脚本"
 date: 2019-06-16T21:16:32+08:00
 lastmod: 2019-06-16T21:16:32+08:00
 draft: false
 keywords: ["java","jdk"]
 description: "一键安装jdk"
-tags: ["java","jdk","sh"]
+tags: ["java"]
 categories: ["Java"]
 # author: ""
 comment: false

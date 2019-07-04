@@ -12,20 +12,11 @@
     
     
     <item>
-      <title>Linux</title>
+      <title>linux</title>
       <link>https://scallee.github.io/blog//tags/linux/</link>
       <pubDate>Mon, 01 Jul 2019 20:48:03 +0800</pubDate>
       
       <guid>https://scallee.github.io/blog//tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cluster</title>
-      <link>https://scallee.github.io/blog//tags/cluster/</link>
-      <pubDate>Mon, 17 Jun 2019 10:03:42 +0800</pubDate>
-      
-      <guid>https://scallee.github.io/blog//tags/cluster/</guid>
       <description></description>
     </item>
     
@@ -57,47 +48,11 @@
     </item>
     
     <item>
-      <title>jdk</title>
-      <link>https://scallee.github.io/blog//tags/jdk/</link>
-      <pubDate>Sun, 16 Jun 2019 21:16:32 +0800</pubDate>
-      
-      <guid>https://scallee.github.io/blog//tags/jdk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sh</title>
-      <link>https://scallee.github.io/blog//tags/sh/</link>
-      <pubDate>Sun, 16 Jun 2019 21:16:32 +0800</pubDate>
-      
-      <guid>https://scallee.github.io/blog//tags/sh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://scallee.github.io/blog//tags/shell/</link>
-      <pubDate>Sun, 16 Jun 2019 20:58:58 +0800</pubDate>
-      
-      <guid>https://scallee.github.io/blog//tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Firewall</title>
       <link>https://scallee.github.io/blog//tags/firewall/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
       <guid>https://scallee.github.io/blog//tags/firewall/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>命令</title>
-      <link>https://scallee.github.io/blog//tags/%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sun, 16 Jun 2019 19:42:41 +0800</pubDate>
-      
-      <guid>https://scallee.github.io/blog//tags/%E5%91%BD%E4%BB%A4/</guid>
       <description></description>
     </item>
     
@@ -129,11 +84,11 @@
     </item>
     
     <item>
-      <title>Navicat快捷键</title>
-      <link>https://scallee.github.io/blog//tags/navicat%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <title>Navicat</title>
+      <link>https://scallee.github.io/blog//tags/navicat/</link>
       <pubDate>Sun, 21 Apr 2019 10:19:42 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog//tags/navicat%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://scallee.github.io/blog//tags/navicat/</guid>
       <description></description>
     </item>
     

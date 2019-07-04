@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on 轨迹的印痕</title>
+    <title>linux on 轨迹的印痕</title>
     <link>https://scallee.github.io/blog//tags/linux/</link>
-    <description>Recent content in Linux on 轨迹的印痕</description>
+    <description>Recent content in linux on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Mon, 01 Jul 2019 20:48:03 +0800</lastBuildDate>
@@ -48,11 +48,20 @@ cat catcreatefile.txt
     </item>
     
     <item>
-      <title>Firewall</title>
-      <link>https://scallee.github.io/blog//post/firewall/</link>
+      <title>Redis Cluster Start</title>
+      <link>https://scallee.github.io/blog//post/redis-cluster-start/</link>
+      <pubDate>Sun, 16 Jun 2019 20:58:58 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/redis-cluster-start/</guid>
+      <description>&lt;p&gt;Redis集群Cluster模式启动脚本&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux Firewall</title>
+      <link>https://scallee.github.io/blog//post/linux-firewall/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog//post/firewall/</guid>
+      <guid>https://scallee.github.io/blog//post/linux-firewall/</guid>
       <description>&lt;h4 id=&#34;1-firewalld的基本使用&#34;&gt;1、firewalld的基本使用&lt;/h4&gt;
 
 &lt;ul&gt;

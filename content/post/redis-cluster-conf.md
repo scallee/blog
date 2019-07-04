@@ -1,11 +1,11 @@
----
+﻿---
 title: "Redis Cluster Conf"
 date: 2019-06-17T10:03:42+08:00
 lastmod: 2019-06-17T10:03:42+08:00
 draft: false
 keywords: ["redis","linux"]
 description: "redis-cluster设置"
-tags: ["redis","linux","cluster"]
+tags: ["redis","linux"]
 categories: ["redis"]
 # author: ""
 comment: false

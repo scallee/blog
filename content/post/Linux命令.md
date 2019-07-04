@@ -1,11 +1,11 @@
----
+﻿---
 title: "Linux命令--ls和ll"
 date: 2019-06-16T19:42:41+08:00
 lastmod: 2019-06-16T19:42:41+08:00
 draft: false
 keywords: ["linux"]
 description: "简单的Linux命令"
-tags: ["linux","命令"]
+tags: ["linux"]
 categories: ["linux"]
 # author: ""
 comment: false

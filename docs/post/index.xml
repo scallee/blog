@@ -84,11 +84,11 @@ cat catcreatefile.txt
     </item>
     
     <item>
-      <title>Firewall</title>
-      <link>https://scallee.github.io/blog//post/firewall/</link>
+      <title>Linux Firewall</title>
+      <link>https://scallee.github.io/blog//post/linux-firewall/</link>
       <pubDate>Sun, 16 Jun 2019 20:42:05 +0800</pubDate>
       
-      <guid>https://scallee.github.io/blog//post/firewall/</guid>
+      <guid>https://scallee.github.io/blog//post/linux-firewall/</guid>
       <description>&lt;h4 id=&#34;1-firewalld的基本使用&#34;&gt;1、firewalld的基本使用&lt;/h4&gt;
 
 &lt;ul&gt;

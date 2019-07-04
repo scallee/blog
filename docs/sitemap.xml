@@ -8,7 +8,7 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//tags/linux/</loc>
+    <loc>https://scallee.github.io/blog//categories/linux/</loc>
     <lastmod>2019-07-01T20:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//categories/linux/</loc>
+    <loc>https://scallee.github.io/blog//tags/linux/</loc>
     <lastmod>2019-07-01T20:48:03+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -49,12 +49,6 @@
     <lastmod>2019-06-17T10:03:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/cluster/</loc>
-    <lastmod>2019-06-17T10:03:42+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -108,28 +102,10 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//tags/jdk/</loc>
-    <lastmod>2019-06-16T21:16:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/sh/</loc>
-    <lastmod>2019-06-16T21:16:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://scallee.github.io/blog//post/redis-cluster-start/</loc>
     <lastmod>2019-06-16T20:58:58+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/shell/</loc>
-    <lastmod>2019-06-16T20:58:58+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -139,7 +115,7 @@
   </url>
   
   <url>
-    <loc>https://scallee.github.io/blog//post/firewall/</loc>
+    <loc>https://scallee.github.io/blog//post/linux-firewall/</loc>
     <lastmod>2019-06-16T20:42:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -150,12 +126,6 @@
     <lastmod>2019-06-16T19:42:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2019-06-16T19:42:41+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -211,16 +181,16 @@
   </url>
   
   <url>
+    <loc>https://scallee.github.io/blog//tags/navicat/</loc>
+    <lastmod>2019-04-21T19:19:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://scallee.github.io/blog//post/navicat-%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2019-04-21T19:19:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://scallee.github.io/blog//tags/navicat%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2019-04-21T19:19:42+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

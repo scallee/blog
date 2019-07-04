@@ -1,11 +1,11 @@
----
+﻿---
 title: "Navicat 快捷键"
 date: 2019-04-21T10:19:42+08:00
 lastmod: 2019-04-21T19:19:42+08:00
 draft: false
 keywords: ["navicat"]
 description: "Navicat快捷键"
-tags: ["Navicat快捷键"]
+tags: ["Navicat"]
 categories: ["MySQL"]
 # author: ""
 comment: false

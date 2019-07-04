@@ -1,11 +1,11 @@
----
+﻿---
 title: "Redis Cluster Start"
 date: 2019-06-16T20:58:58+08:00
 lastmod: 2019-06-16T20:58:58+08:00
 draft: false
 keywords: ["redis","linux"]
 description: "最简单的redis集群cluster模式启动脚本"
-tags: ["redis","shell"]
+tags: ["redis","linux"]
 categories: ["redis"]
 # author: ""
 comment: false
