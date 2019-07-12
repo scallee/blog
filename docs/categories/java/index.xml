@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>java on 轨迹的印痕</title>
+    <title>Java on 轨迹的印痕</title>
     <link>https://scallee.github.io/blog//categories/java/</link>
-    <description>Recent content in java on 轨迹的印痕</description>
+    <description>Recent content in Java on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 16 Jun 2019 21:44:38 +0800</lastBuildDate>
