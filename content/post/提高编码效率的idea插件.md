@@ -1,14 +1,14 @@
 ---
-title: "提高编码效率的idea插件 "
-date: 2019-07-13T20:58:58+08:00
-lastmod: 2019-07-13T20:58:58+08:00
+title: "提高编码效率的idea插件"
+date: 2019-07-13T14:50:02+08:00
+lastmod: 2019-07-13T14:50:02+08:00
 draft: false
 keywords: ["idea"]
-description: "提高编码效率的idea插件"
+description: "idea插件"
 tags: ["idea"]
 categories: ["转载"]
 # author: ""
-comment: false
+# comment: false
 toc: true
 contentCopyright: false
 reward: false
@@ -22,25 +22,26 @@ mathjax: false
 因为idea自带的插件下载可能连接不上服务器而导致插件下载失败，所以这里推荐使用引入外部插件的方式
 
 插件包也给你们准备好了（你们无需去下载啦），对照此篇博客配置即可：
+
 <!--more-->
 
 链接：<https://pan.baidu.com/s/1VKXJ74W3s6RZHL-3YHlaEA> 密码：z411
 
- ![img](blog/image/idea-plugins/wangpan.png)
+ ![img](/blog/image/idea-plugins/wangpan.png)
 
 #  **首先说一下idea引入外部插件的方式：**
 
 1.打开settings配置面板
 
-![img](blog/image/idea-plugins/setting.png)
+![img](/blog/image/idea-plugins/setting.png)
 
 2.选择plugins--》install pluginfrom disk  选择相应插件包==》点击ok
 
- ![img](blog/image/idea-plugins/install.png)
+ ![img](/blog/image/idea-plugins/install.png)
 
 最后，“**Restart**”重启idea 让它加载一下新加入的插件！！！
 
-![img](blog/image/idea-plugins/restart.png)
+![img](/blog/image/idea-plugins/restart.png)
 
 # 常用插件：
 
@@ -64,17 +65,17 @@ mathjax: false
 
 重启idea后如果插件加载成功左下角出现：
 
-![img](blog/image/idea-plugins/findbugs-success.png)
+![img](/blog/image/idea-plugins/findbugs-success.png)
 
 ## **实际应用：**
 
-**![img](blog/image/idea-plugins/findbugs-use.png)**
+**![img](/blog/image/idea-plugins/findbugs-use.png)**
 
 \----------------------
 
 扫描完成后：
 
-![img](blog/image/idea-plugins/findbugs-result.png)
+![img](/blog/image/idea-plugins/findbugs-result.png)
 
 ### **附录（网摘）：**
 
@@ -86,7 +87,7 @@ FindBugs：特色是能够检查出空指针异常这种bug！
 
 使用：右键单击（module、单个文件等）--->在快捷菜单中选择findbugs即可
 
-![img](blog/image/idea-plugins/findbugs-desc.png)
+![img](/blog/image/idea-plugins/findbugs-desc.png)
 
 #### **附:FindBugs的Bug种类说明**
 
@@ -104,7 +105,7 @@ MS：属性是可变的数组；属性是可变的Hashtable；属性应该是pac
 
 类名小写问题：
 
-　![img](blog/image/idea-plugins/findbugs-bad.png)
+　![img](/blog/image/idea-plugins/findbugs-bad.png)
 
 · Correctness 一般的正确性问题
 
@@ -160,7 +161,7 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 重启idea后如果插件加载成功 打开pom文件左下角出现：
 
-![img](blog/image/idea-plugins/maven-helper-success.png)
+![img](/blog/image/idea-plugins/maven-helper-success.png)
 
 ## **实际应用：**
 
@@ -172,11 +173,11 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 　　3) All Dependencies as Tree（树形式查看所有依赖）
 
-![img](blog/image/idea-plugins/maven-helper-usr.png)
+![img](/blog/image/idea-plugins/maven-helper-usr.png)
 
 选中右键就可以 Exclude 啦，想用1.2就把其他版本的Exclude掉，想用1.1.3就把其他版本的Exclude掉，很方便。
 
-![img](blog/image/idea-plugins/maven-helper-result.png)
+![img](/blog/image/idea-plugins/maven-helper-result.png)
 
 # 3. **VisualVM Launcher**
 
@@ -194,13 +195,13 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 重启idea后如果插件加载成功右上角出现：
 
-![img](blog/image/idea-plugins/vvm-success.png)
+![img](/blog/image/idea-plugins/vvm-success.png)
 
 ## **实际应用：**
 
 非常感谢有一个大佬，给我的评论，我研究了一下才知道实际应用，非常感谢哈，
 
-![img](blog/image/idea-plugins/vvm-import.png)
+![img](/blog/image/idea-plugins/vvm-import.png)
 
 下面教大家一下实际应用：
 
@@ -208,7 +209,7 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 链接：<https://pan.baidu.com/s/1kIduEykNNrYyZd1CwJpntg> 密码：bxib
 
-![img](blog/image/idea-plugins/vvm-client.png)
+![img](/blog/image/idea-plugins/vvm-client.png)
 
 将客户端解压
 
@@ -216,23 +217,23 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 配置excutable===》选择到客户端的bin目录的visualvm.exe文件
 
-![img](blog/image/idea-plugins/vvm-setting.png)
+![img](/blog/image/idea-plugins/vvm-setting.png)
 
  然后点击ok。。apply应用一下
 
-![img](blog/image/idea-plugins/vvm-apply.png)
+![img](/blog/image/idea-plugins/vvm-apply.png)
 
 右键使用VM插件启动
 
-![img](blog/image/idea-plugins/vvm-run.png)
+![img](/blog/image/idea-plugins/vvm-run.png)
 
 然后会自动加载程序：
 
-![img](blog/image/idea-plugins/vvm-start.png)
+![img](/blog/image/idea-plugins/vvm-start.png)
 
 可查看jvm状态，然后就可以自行调试咯：
 
-![img](blog/image/idea-plugins/vvm-status.png)
+![img](/blog/image/idea-plugins/vvm-status.png)
 
 具体怎么搞，就看你们自己想怎么搞咯，，本博主后期也会发布jvm调优的博客的，
 
@@ -260,7 +261,7 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 当returnType是List Set Map时生成默认值
 
-![img](blog/image/idea-plugins/setter.png)
+![img](/blog/image/idea-plugins/setter.png)
 
 # 5. **Rainbow Brackets**
 
@@ -276,7 +277,7 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 重启idea后如果插件加载成功右下角出现弹出框
 
- ![img](blog/image/idea-plugins/rainbow-brackets.png)
+ ![img](/blog/image/idea-plugins/rainbow-brackets.png)
 
  
 
@@ -284,13 +285,13 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 最近括号内容高亮效果：ctrl+鼠标右键单击  
 
-![img](blog/image/idea-plugins/rainbow-brackets-apply.png)
+![img](/blog/image/idea-plugins/rainbow-brackets-apply.png)
 
  
 
 最近括号内容外暗淡效果：alt+鼠标右键单击 
 
- ![img](blog/image/idea-plugins/rainbow-brackets-result.png)
+ ![img](/blog/image/idea-plugins/rainbow-brackets-result.png)
 
  
 
@@ -325,7 +326,7 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 重启idea后如果插件加载成功右下角出现：
 
-![img](blog/image/idea-plugins/translation-success.png)
+![img](/blog/image/idea-plugins/translation-success.png)
 
 多翻译引擎 （可切换）
 
@@ -339,11 +340,11 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 选择单词，右键：
 
-![img](blog/image/idea-plugins/translation-apply.png)
+![img](/blog/image/idea-plugins/translation-apply.png)
 
 翻译加朗读：
 
-![img](blog/image/idea-plugins/translation-result.png)
+![img](/blog/image/idea-plugins/translation-result.png)
 
 # 7. **P3c**   
 
@@ -364,18 +365,17 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 <https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines>
 
  
-
 ## **成功标志：**
 
 点击上方tools，出现阿里编码制约
 
-![img](blog/image/idea-plugins/p3c-success.png)
+![img](/blog/image/idea-plugins/p3c-success.png)
 
 ## **实际应用：**
 
 右键，点击编码制约规范
 
-![img](blog/image/idea-plugins/p3c-apply.png)
+![img](/blog/image/idea-plugins/p3c-apply.png)
 
 下方出现：
 
@@ -383,20 +383,14 @@ SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误
 
 　　左边是扫描出的不符合规范的代码，依次点进去可以看到是代码的多少行出现了规约问题以及哪一个规约问题，右边则是规约的详细描述及实例代码。
 
-![img](blog/image/idea-plugins/p3c-result.png)
+![img](/blog/image/idea-plugins/p3c-result.png)
 
 也可快捷键：
 
 　　Alt+enter
 
-![img](blog/image/idea-plugins/p3c-cuts.png)
+![img](/blog/image/idea-plugins/p3c-cuts.png)
 
 还可以让其自动修复代码：
 
-![img](blog/image/idea-plugins/p3c-modify.png)
-
- 
-
- 
-
- 
+![img](/blog/image/idea-plugins/p3c-modify.png)

@@ -6,10 +6,387 @@
     <description>Recent content on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Jul 2019 20:48:03 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 14:50:02 +0800</lastBuildDate>
     
         <atom:link href="https://scallee.github.io/blog//index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>提高编码效率的idea插件</title>
+      <link>https://scallee.github.io/blog//post/%E6%8F%90%E9%AB%98%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%9A%84idea%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Sat, 13 Jul 2019 14:50:02 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/%E6%8F%90%E9%AB%98%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%9A%84idea%E6%8F%92%E4%BB%B6/</guid>
+      
+        <description>&lt;h1 id=&#34;提高编码效率的idea插件&#34;&gt;提高编码效率的idea插件&lt;/h1&gt;
+
+&lt;p&gt;转载来源：&lt;a href=&#34;https://www.cnblogs.com/lsy131479/p/9646444.html&#34;&gt;房上的猫&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;因为idea自带的插件下载可能连接不上服务器而导致插件下载失败，所以这里推荐使用引入外部插件的方式&lt;/p&gt;
+
+&lt;p&gt;插件包也给你们准备好了（你们无需去下载啦），对照此篇博客配置即可：&lt;/p&gt;
+
+&lt;p&gt;链接：&lt;a href=&#34;https://pan.baidu.com/s/1VKXJ74W3s6RZHL-3YHlaEA&#34;&gt;https://pan.baidu.com/s/1VKXJ74W3s6RZHL-3YHlaEA&lt;/a&gt; 密码：z411&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/wangpan.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;首先说一下idea引入外部插件的方式&#34;&gt;&lt;strong&gt;首先说一下idea引入外部插件的方式：&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;1.打开settings配置面板&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/setting.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2.选择plugins&amp;ndash;》install pluginfrom disk  选择相应插件包==》点击ok&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/install.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最后，“&lt;strong&gt;Restart&lt;/strong&gt;”重启idea 让它加载一下新加入的插件！！！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/restart.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;常用插件&#34;&gt;常用插件：&lt;/h1&gt;
+
+&lt;p&gt;下面的所有插件都使用上面外部引用方式集成相应的插件包即可&lt;/p&gt;
+
+&lt;h1 id=&#34;1-findbugs-idea&#34;&gt;1. &lt;strong&gt;FindBugs-IDEA&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;作用&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;检测代码中可能的bug及不规范的位置，&lt;/p&gt;
+
+&lt;p&gt;写完代码后检测下 避免低级bug，&lt;/p&gt;
+
+&lt;p&gt;静态分析工具承诺无需开发人员费劲就能找出代码中已有的缺陷。当然，如果有多年的编写经验，就会知道这些承诺并不是一定能兑现。&lt;/p&gt;
+
+&lt;h2 id=&#34;插件提供地址&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/3847-findbugs-idea&#34;&gt;https://plugins.jetbrains.com/plugin/3847-findbugs-idea&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;重启idea后如果插件加载成功左下角出现：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/findbugs-success.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/findbugs-use.png&#34; alt=&#34;img&#34; /&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&lt;/p&gt;
+
+&lt;p&gt;扫描完成后：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/findbugs-result.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;附录-网摘&#34;&gt;&lt;strong&gt;附录（网摘）：&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;FindBugs 它用来查找Java代码中存在的bug。它使用静态分析方法标识出Java程序中上百种潜在的不同类型的错误。&lt;/p&gt;
+
+&lt;p&gt;FindBugs支持对包级别、项目级别、模块级别、单个文件级别，以及自定义范围的Bug分析。&lt;/p&gt;
+
+&lt;p&gt;FindBugs：特色是能够检查出空指针异常这种bug！&lt;/p&gt;
+
+&lt;p&gt;使用：右键单击（module、单个文件等）&amp;mdash;&amp;gt;在快捷菜单中选择findbugs即可&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/findbugs-desc.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;附-findbugs的bug种类说明&#34;&gt;&lt;strong&gt;附:FindBugs的Bug种类说明&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;· Bad practice 坏的实践&lt;/p&gt;
+
+&lt;p&gt;一些不好的实践，下面列举几个：
+HE： 类定义了equals()，却没有hashCode()；或类定义了equals()，却使用Object.hashCode()；或类定义了hashCode()，却没有equals()；或类定义了hashCode()，却使用Object.equals()；类继承了equals()，却使用Object.hashCode()。
+SQL：Statement 的execute方法调用了非常量的字符串；或Prepared Statement是由一个非常量的字符串产生。
+DE： 方法终止或不处理异常，一般情况下，异常应该被处理或报告，或被方法抛出。
+Malicious code vulnerability 可能受到的恶意攻击&lt;/p&gt;
+
+&lt;p&gt;如果代码公开，可能受到恶意攻击的代码，下面列举几个：
+FI： 一个类的finalize()应该是protected，而不是public的。
+MS：属性是可变的数组；属性是可变的Hashtable；属性应该是package protected的。&lt;/p&gt;
+
+&lt;p&gt;类名小写问题：&lt;/p&gt;
+
+&lt;p&gt;　&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/findbugs-bad.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;· Correctness 一般的正确性问题&lt;/p&gt;
+
+&lt;p&gt;可能导致错误的代码，下面列举几个：
+NP： 空指针被引用；在方法的异常路径里，空指针被引用；方法没有检查参数是否null；null值产生并被引用；null值产生并在方法的异常路径被引用；传给方法一个声明为@NonNull的null参数；方法的返回值声明为@NonNull实际是null。
+Nm： 类定义了hashcode()方法，但实际上并未覆盖父类Object的hashCode()；类定义了tostring()方法，但实际上并未覆盖父类Object的toString()；很明显的方法和构造器混淆；方法名容易混淆。
+SQL：方法尝试访问一个Prepared Statement的0索引；方法尝试访问一个ResultSet的0索引。
+UwF：所有的write都把属性置成null，这样所有的读取都是null，这样这个属性是否有必要存在；或属性从没有被write。&lt;/p&gt;
+
+&lt;p&gt;· Dodgy 危险的&lt;/p&gt;
+
+&lt;p&gt;具有潜在危险的代码，可能运行期产生错误，下面列举几个：
+CI： 类声明为final但声明了protected的属性。
+DLS：对一个本地变量赋值，但却没有读取该本地变量；本地变量赋值成null，却没有读取该本地变量。
+ICAST： 整型数字相乘结果转化为长整型数字，应该将整型先转化为长整型数字再相乘。
+INT：没必要的整型数字比较，如X &amp;lt;= Integer.MAX_VALUE。
+NP： 对readline()的直接引用，而没有判断是否null；对方法调用的直接引用，而方法可能返回null。
+REC：直接捕获Exception，而实际上可能是RuntimeException。
+ST： 从实例方法里直接修改类变量，即static属性。&lt;/p&gt;
+
+&lt;p&gt;· Performance 性能问题&lt;/p&gt;
+
+&lt;p&gt;可能导致性能不佳的代码，下面列举几个：
+DM：方法调用了低效的Boolean的构造器，而应该用Boolean.valueOf(…)；用类似Integer.toString(1) 代替new Integer(1).toString()；方法调用了低效的float的构造器，应该用静态的valueOf方法。
+SIC：如果一个内部类想在更广泛的地方被引用，它应该声明为static。
+SS： 如果一个实例属性不被读取，考虑声明为static。
+UrF：如果一个属性从没有被read，考虑从类中去掉。
+UuF：如果一个属性从没有被使用，考虑从类中去掉。&lt;/p&gt;
+
+&lt;p&gt;· Multithreaded correctness 多线程的正确性多线程编程时，可能导致错误的代码，下面列举几个：&lt;/p&gt;
+
+&lt;p&gt;ESync：空的同步块，很难被正确使用。
+MWN：错误使用notify()，可能导致IllegalMonitorStateException异常；或错误的使用wait()。
+No： 使用notify()而不是notifyAll()，只是唤醒一个线程而不是所有等待的线程。
+SC： 构造器调用了Thread.start()，当该类被继承可能会导致错误。&lt;/p&gt;
+
+&lt;p&gt;· Internationalization 国际化
+当对字符串使用upper或lowercase方法，如果是国际的字符串，可能会不恰当的转换。&lt;/p&gt;
+
+&lt;h1 id=&#34;2-maven-helper&#34;&gt;2. &lt;strong&gt;Maven Helper&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;作用-1&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;一键查看maven依赖，查看冲突的依赖，一键进行exclude依赖&lt;/p&gt;
+
+&lt;p&gt;对于大型项目 非常方便&lt;/p&gt;
+
+&lt;h2 id=&#34;插件提供地址-1&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/7179-maven-helper&#34;&gt;https://plugins.jetbrains.com/plugin/7179-maven-helper&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志-1&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;重启idea后如果插件加载成功 打开pom文件左下角出现：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/maven-helper-success.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用-1&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;切换Dependency Analyzer试图即可进行相应操作：&lt;/p&gt;
+
+&lt;p&gt;　　1) Conflicts（查看冲突）&lt;/p&gt;
+
+&lt;p&gt;　　2) All Dependencies as List（列表形式查看所有依赖）&lt;/p&gt;
+
+&lt;p&gt;　　3) All Dependencies as Tree（树形式查看所有依赖）&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/maven-helper-usr.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;选中右键就可以 Exclude 啦，想用1.2就把其他版本的Exclude掉，想用1.1.3就把其他版本的Exclude掉，很方便。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/maven-helper-result.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;3-visualvm-launcher&#34;&gt;3. &lt;strong&gt;VisualVM Launcher&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;作用-2&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;运行java程序的时候启动visualvm，方便查看jvm的情况 比如堆内存大小的分配&lt;/p&gt;
+
+&lt;p&gt;某个对象占用了多大的内存，jvm调优必备工具&lt;/p&gt;
+
+&lt;h2 id=&#34;插件提供地址-2&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/7115-visualvm-launcher&#34;&gt;https://plugins.jetbrains.com/plugin/7115-visualvm-launcher&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志-2&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;重启idea后如果插件加载成功右上角出现：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-success.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用-2&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;非常感谢有一个大佬，给我的评论，我研究了一下才知道实际应用，非常感谢哈，&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-import.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下面教大家一下实际应用：&lt;/p&gt;
+
+&lt;p&gt;首先需要一个客户端（这里已经为大家准备好）：&lt;/p&gt;
+
+&lt;p&gt;链接：&lt;a href=&#34;https://pan.baidu.com/s/1kIduEykNNrYyZd1CwJpntg&#34;&gt;https://pan.baidu.com/s/1kIduEykNNrYyZd1CwJpntg&lt;/a&gt; 密码：bxib&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-client.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;将客户端解压&lt;/p&gt;
+
+&lt;p&gt;打开settings配置面板&lt;/p&gt;
+
+&lt;p&gt;配置excutable===》选择到客户端的bin目录的visualvm.exe文件&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-setting.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后点击ok。。apply应用一下&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-apply.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;右键使用VM插件启动&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-run.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后会自动加载程序：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-start.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;可查看jvm状态，然后就可以自行调试咯：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/vvm-status.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;具体怎么搞，就看你们自己想怎么搞咯，，本博主后期也会发布jvm调优的博客的，&lt;/p&gt;
+
+&lt;h1 id=&#34;4-generateallsetter&#34;&gt;4. &lt;strong&gt;GenerateAllSetter&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;作用-3&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;一键调用一个对象的所有set方法并且赋予默认值 在对象字段多的时候非常方便&lt;/p&gt;
+
+&lt;h2 id=&#34;插件提供地址-3&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/9360-generateallsetter&#34;&gt;https://plugins.jetbrains.com/plugin/9360-generateallsetter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志-3&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;。。。。。。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用-3&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;通过alt +enter生成一个类所有setter方法的默认值&lt;/p&gt;
+
+&lt;p&gt;当两个对象转换器具有相同的字段时，为它们生成一个set方法&lt;/p&gt;
+
+&lt;p&gt;当returnType是List Set Map时生成默认值&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/setter.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;5-rainbow-brackets&#34;&gt;5. &lt;strong&gt;Rainbow Brackets&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;作用-4&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;彩虹颜色的括号  看着很舒服 敲代码效率变高。。清除分清括号个数，防止括号错乱&lt;/p&gt;
+
+&lt;h2 id=&#34;插件提供地址-4&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/10080-rainbow-brackets&#34;&gt;https://plugins.jetbrains.com/plugin/10080-rainbow-brackets&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志-4&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;重启idea后如果插件加载成功右下角出现弹出框&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/rainbow-brackets.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用-4&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;最近括号内容高亮效果：ctrl+鼠标右键单击&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/rainbow-brackets-apply.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最近括号内容外暗淡效果：alt+鼠标右键单击&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/rainbow-brackets-result.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;6-translation&#34;&gt;6. &lt;strong&gt;Translation&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;作用-5&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;最好用的翻译插件，功能很强大，界面很漂亮&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;特征：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;多个翻译引擎。多种语言的互译。
+
+&lt;ul&gt;
+&lt;li&gt;谷歌翻译。&lt;/li&gt;
+&lt;li&gt;有道翻译。&lt;/li&gt;
+&lt;li&gt;百度翻译。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;文字转语音。&lt;/li&gt;
+&lt;li&gt;自动选择字。&lt;/li&gt;
+&lt;li&gt;自动分词。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;插件提供地址-5&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/8579-translation&#34;&gt;https://plugins.jetbrains.com/plugin/8579-translation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志-5&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;重启idea后如果插件加载成功右下角出现：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/translation-success.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;多翻译引擎 （可切换）&lt;/p&gt;
+
+&lt;p&gt;　　&lt;strong&gt;·&lt;/strong&gt;Google翻译&lt;/p&gt;
+
+&lt;p&gt;　　&lt;strong&gt;·&lt;/strong&gt; 有道翻译&lt;/p&gt;
+
+&lt;p&gt;　　&lt;strong&gt;·&lt;/strong&gt; 百度翻译&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用-5&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;选择单词，右键：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/translation-apply.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;翻译加朗读：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/translation-result.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;7-p3c&#34;&gt;7. &lt;strong&gt;P3c&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Alibaba Java Coding Guidelines&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;作用-6&#34;&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;阿里巴巴出品的java代码规范插件&lt;/p&gt;
+
+&lt;p&gt;可以扫描整个项目找到不规范的地方 并且大部分可以自动修复&lt;/p&gt;
+
+&lt;p&gt;虽说检测功能没有findbugs强大，但是可以自动修复&lt;/p&gt;
+
+&lt;p&gt;阿里巴巴Java编码指南插件支持。&lt;/p&gt;
+
+&lt;h2 id=&#34;插件提供地址-6&#34;&gt;&lt;strong&gt;插件提供地址：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines&#34;&gt;https://plugins.jetbrains.com/plugin/10046-alibaba-java-coding-guidelines&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;成功标志-6&#34;&gt;&lt;strong&gt;成功标志：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;点击上方tools，出现阿里编码制约&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/p3c-success.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;实际应用-6&#34;&gt;&lt;strong&gt;实际应用：&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;右键，点击编码制约规范&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/p3c-apply.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下方出现：&lt;/p&gt;
+
+&lt;p&gt;　　扫描代码后，不符合规约的代码会按Blocker/Critical/Major三个等级显示在下方面板中&lt;/p&gt;
+
+&lt;p&gt;　　左边是扫描出的不符合规范的代码，依次点进去可以看到是代码的多少行出现了规约问题以及哪一个规约问题，右边则是规约的详细描述及实例代码。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/p3c-result.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;也可快捷键：&lt;/p&gt;
+
+&lt;p&gt;　　Alt+enter&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/p3c-cuts.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;还可以让其自动修复代码：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://scallee.github.io/blog//blog/image/idea-plugins/p3c-modify.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Linux命令  文件简单操作</title>
