@@ -6,10 +6,282 @@
     <description>Recent content on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 13 Jul 2019 14:50:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 00:48:03 +0800</lastBuildDate>
     
         <atom:link href="https://scallee.github.io/blog//index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>npm环境配置及使用</title>
+      <link>https://scallee.github.io/blog//post/npm%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 05 Aug 2019 00:48:03 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/npm%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;npm环境配置及使用&#34;&gt;npm环境配置及使用&lt;/h1&gt;
+
+&lt;h2 id=&#34;安装node-js&#34;&gt;安装node.js&lt;/h2&gt;
+
+&lt;h3 id=&#34;下载windows版本的node-msi&#34;&gt;下载windows版本的node.msi&lt;/h3&gt;
+
+&lt;p&gt;安装react-native&lt;/p&gt;
+
+&lt;p&gt;打开cmd：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm install -g react-native-cli&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;配置国内镜像&#34;&gt;配置国内镜像&lt;/h3&gt;
+
+&lt;p&gt;在D:\Program Files\nodejs\node_modules\npm\下的npmrc文件中配置
+&lt;code&gt;registry=https://registry.npm.taobao.org&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm config set prefix &amp;quot;D:\Program Files\nodejs\node_global&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm config set cache &amp;quot;D:\Program Files\nodejs\node_cache&amp;quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在【系统变量】下新建【NODE_PATH】，输入【D:\Program Files\nodejs\node_global\node_modules】，
+将【用户变量】下的【Path】修改为【D:\Program Files\nodejs\node_global】&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;#查看基本配置 
+npm config list 
+#查看所有配置
+npm config list -l&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;npm本地安装与全局安装&#34;&gt;npm本地安装与全局安装&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;npm install grunt&lt;/code&gt; // 本地安装，则是将模块下载到当前命令行所在目录。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm install -g grunt&lt;/code&gt; //全局安装，模块将被下载安装到【全局目录】中；&lt;/p&gt;
+
+&lt;p&gt;npm如何获取全局安装的默认目录？&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm config get prefix&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;npm如何设置全局安装的默认目录？&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;npm config set prefix “directory”&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;如何从windows中删除node-js&#34;&gt;如何从Windows中删除Node.js：&lt;/h2&gt;
+
+&lt;p&gt;1.从卸载程序卸载程序和功能。&lt;/p&gt;
+
+&lt;p&gt;2.重新启动（或者您可能会从任务管理器中杀死所有与节点相关的进程）。&lt;/p&gt;
+
+&lt;p&gt;3.寻找这些文件夹并删除它们（及其内容）（如果还有）。根据您安装的版本，UAC设置和CPU架构，这些可能或可能不存在：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;C:\Program Files (x86)\Nodejs
+C:\Program Files\Nodejs
+C:\Users{User}\AppData\Roaming\npm（或%appdata%\npm）
+C:\Users{User}\AppData\Roaming\npm-cache（或%appdata%\npm-cache）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;4.检查您的%PATH%环境变量以确保没有引用Nodejs或npm存在。&lt;/p&gt;
+
+&lt;p&gt;5.如果仍然没有卸载，请where node在命令提示符下键入，您将看到它所在的位置 - 删除（也可能是父目录）。&lt;/p&gt;
+
+&lt;p&gt;6.重新启动&lt;/p&gt;
+
+&lt;h2 id=&#34;常用npm命令&#34;&gt;常用npm命令&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;#查看npmjs服务器上包的最新版本信息
+npm view &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; version
+#查看npmjs服务器上包所有信息
+npm info &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#查看本地包信息
+npm ls &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#查看本地包信息 全局
+npm ls &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; -g
+#查看所有全局安装的模块
+npm list -g
+#查看某个模块的版本号
+npm list &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#安装好后不写入package.json中
+npm install &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#安装好后写入package.json的dependencies中（生产环境依赖）
+npm install &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; --save
+#安装好后写入package.json的devDepencies中（开发环境依赖）
+npm install &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; --save-dev
+#删除模块，但不删除模块留在package.json中的对应信息
+npm uninstall &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#删除模块，同时删除模块留在package.json中dependencies下的对应信息
+npm uninstall &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; --save(或者简写-S)
+#删除模块，同时删除模块留在package.json中devDependencies下的对应信息
+npm uninstall &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; --save-dev(或者简写-D)
+#更新模块
+npm update &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#搜索模块
+npm search &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&amp;gt;
+#查看包的依赖关系
+npm view &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;packageName&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; dependencies
+#查看当前包的安装路径
+npm root
+#查看全局的包的安装路径
+npm root -g
+#查看npm使用的所有文件夹
+npm help folders
+#清理缓存
+npm cache clean&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;npm-i和npm-install实际使用的区别点主要如下-windows下&#34;&gt;npm i和npm install实际使用的区别点主要如下(windows下)：&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;用npm i安装的模块无法用npm uninstall删除，用npm uninstall i才卸载掉&lt;/li&gt;
+&lt;li&gt;npm i会帮助检测与当前node版本最匹配的npm包版本号，并匹配出来相互依赖的npm包应该提升的版本号&lt;/li&gt;
+&lt;li&gt;部分npm包在当前node版本下无法使用，必须使用建议版本&lt;/li&gt;
+&lt;li&gt;安装报错时intall肯定会出现npm-debug.log 文件，npm i不一定&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;npm依赖包版本号-和-和-的区别&#34;&gt;NPM依赖包版本号~和^和*的区别&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt;会匹配最近的小版本依赖包，比如~1.2.3会匹配所有1.2.x版本，但是不包括1.3.0&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;^&lt;/code&gt; 会匹配最新的大版本依赖包，比如^1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;*&lt;/code&gt; 这意味着安装最新版本的依赖包&lt;/p&gt;
+
+&lt;h2 id=&#34;npm-audit&#34;&gt;npm-audit&lt;/h2&gt;
+
+&lt;h3 id=&#34;语法&#34;&gt;语法：&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;npm audit [--json&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--parseable&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--audit-level=(low&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;moderate&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;high&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;critical)]
+npm audit fix [--force&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--package-lock-only&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;--dry-run]&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;用法-谷歌翻译&#34;&gt;用法(谷歌翻译)：&lt;/h3&gt;
+
+&lt;p&gt;扫描项目是否存在漏洞,并自动将任何兼容更新安装到易受攻击的依赖项:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit fix&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;在不修改节点模块但仍在更新 pkglock 的情况下运行审核修复:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit fix --package-lock-only&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;跳过更新开发依赖项:
+只更新dependencies中安装的包，跳过devDependencies中的包&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit fix --only=prod&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;让审核修复程序将 semver 主要更新安装到顶级依赖项,而不仅仅是与 semver 兼容的更新:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit fix --force&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;执行干运行以获取审核修复将做什么,以及输出 JSON 格式的安装信息:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit fix --dry-run --json&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;扫描项目漏洞,只显示详细信息,而不修复任何内容:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;以 JSON 格式获取详细的审核报告:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit --json&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;以纯文本结果获取详细的审核报告,由制表符分隔,以便将来在脚本或命令行后处理中重复使用,例如,选择打印的一些列:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit --parseable&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;要分析列,可以使用例如 awk,只需打印其中一些:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit --parseable | awk -F $&#39;\t&#39; &#39;{print $1,$4}&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;仅当结果包含级别为中等或更高的漏洞时,审核才会失败:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ npm audit --audit-level=moderate&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;参考：&lt;a href=&#34;https://docs.npmjs.com/cli/audit.html#synopsis&#34;&gt;https://docs.npmjs.com/cli/audit.html#synopsis&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;android-sdk在线更新镜像服务器&#34;&gt;Android SDK在线更新镜像服务器&lt;/h2&gt;
+
+&lt;p&gt;中国科学院开源协会镜像站地址:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mirrors.opencas.cn&#34;&gt;http://mirrors.opencas.cn&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mirrors.opencas.org&#34;&gt;http://mirrors.opencas.org&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mirrors.opencas.ac.cn&#34;&gt;http://mirrors.opencas.ac.cn&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;上海GDG镜像服务器地址:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sdk.gdgshanghai.com&#34;&gt;http://sdk.gdgshanghai.com&lt;/a&gt; 端口：8000&lt;/p&gt;
+
+&lt;p&gt;北京化工大学镜像服务器地址:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ubuntu.buct.edu.cn/&#34;&gt;http://ubuntu.buct.edu.cn/&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ubuntu.buct.cn/&#34;&gt;http://ubuntu.buct.cn/&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ubuntu.buct6.edu.cn/&#34;&gt;http://ubuntu.buct6.edu.cn/&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;大连东软信息学院镜像服务器地址:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mirrors.neusoft.edu.cn&#34;&gt;http://mirrors.neusoft.edu.cn&lt;/a&gt; 端口：80&lt;/p&gt;
+
+&lt;p&gt;腾讯Bugly 镜像:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://android-mirror.bugly.qq.com&#34;&gt;http://android-mirror.bugly.qq.com&lt;/a&gt; 端口：8080&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>提高编码效率的idea插件</title>

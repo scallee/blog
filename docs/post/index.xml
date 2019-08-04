@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 轨迹的印痕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 13 Jul 2019 14:50:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Aug 2019 00:48:03 +0800</lastBuildDate>
     
 	<atom:link href="https://scallee.github.io/blog//post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>npm环境配置及使用</title>
+      <link>https://scallee.github.io/blog//post/npm%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 05 Aug 2019 00:48:03 +0800</pubDate>
+      
+      <guid>https://scallee.github.io/blog//post/npm%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/</guid>
+      <description>npm环境配置及使用 安装node.js 下载windows版本的node.msi 安装react-native 打开cmd： npm install -g react-native-cli 配置国内镜像 在</description>
+    </item>
     
     <item>
       <title>提高编码效率的idea插件</title>
